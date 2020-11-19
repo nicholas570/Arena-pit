@@ -6,6 +6,7 @@ import LayoutedView from './layout/Layout';
 import Home from './views/Home';
 import FighterDetails from './views/FighterDetails';
 import WeekFights from './views/WeekFights';
+import About from './views/About';
 
 function LayoutedRoute({ component: Component, layout: Layout, ...rest }) {
   return (
@@ -35,6 +36,7 @@ function Router() {
           component={WeekFights}
           layout={LayoutedView}
         />
+        <LayoutedRoute path="/about" component={About} layout={LayoutedView} />
       </Switch>
     </BrowserRouter>
   );

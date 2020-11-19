@@ -1,0 +1,23 @@
+.wrapperProfile {
+  position: relative;
+  width: max-content;
+  margin: 0.5rem;
+}
+
+.picture {
+  border-radius: 0.5rem;
+}
+
+.name {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+}
+
+.favourite {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  cursor: pointer;
+}
