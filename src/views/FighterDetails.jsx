@@ -1,11 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+
 import Gladiators from '../Gladiators';
+
+import iconNotFavorite from '../assets/icons/favorite_border.svg';
+import iconFavorite from '../assets/icons/favorite.svg';
 
 import styles from '../css/FighterDetails.module.css';
 
 function FighterDetails() {
   const [gladiator, setgladiator] = useState({});
+  const [isFavourite, setisFavourite] = useState(false);
+
   const { id } = useParams();
 
   useEffect(() => {
@@ -18,6 +24,12 @@ function FighterDetails() {
   return (
     <div className={styles.fighterDetails}>
       <div className={styles.fighterCard}>
+        <img
+          className={styles.favourite}
+          onClick={() => setisFavourite(!isFavourite)}
+          src={isFavourite ? iconFavorite : iconNotFavorite}
+          alt="favourite"
+        />
         <div className={styles.profil}>
           <img
             className={styles.imageFighter}
@@ -29,27 +41,27 @@ function FighterDetails() {
         <div className={styles.infos}>
           <h2>Stats</h2>
           <ul className={styles.statsList}>
-            <li>
+            <li className={styles.stats}>
               Combat:
               {gladiator.combat}
             </li>
-            <li>
+            <li className={styles.stats}>
               Durability:
               {gladiator.durability}
             </li>
-            <li>
+            <li className={styles.stats}>
               Intelligence:
               {gladiator.intelligence}
             </li>
-            <li>
+            <li className={styles.stats}>
               Power:
               {gladiator.power}
             </li>
-            <li>
+            <li className={styles.stats}>
               Speed:
               {gladiator.speed}
             </li>
-            <li>
+            <li className={styles.stats}>
               Strength:
               {gladiator.strength}
             </li>
