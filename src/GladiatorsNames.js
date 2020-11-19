@@ -1,0 +1,1 @@
+const GLADIATORS_NAMES = ["Maximus", "Bricius", "Nicolus", "Francius", "Aymericus", "Florius", "Baptus", "Gwenvaelius", "Thomus", "Benitus", "Florius", "Loïcius", "Bastus"];
