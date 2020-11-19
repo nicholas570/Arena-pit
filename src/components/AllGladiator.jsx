@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useContext } from 'react';
-import PropTypes from 'prop-types';
 
 import Pagination from 'rc-pagination';
 import langLocal from 'rc-pagination/es/locale/en_US';
@@ -30,6 +29,15 @@ const AllGladiator = () => {
   const { currentPage, start, end } = cursor;
   return (
     <section className={styles.allGladiator}>
+      <Pagination
+        className={styles.pagination}
+        onChange={handlePagination}
+        current={currentPage}
+        pageSize={6}
+        total={totale}
+        locale={langLocal}
+        style={{ alignSelf: 'flex-end' }}
+      />
       <div className={styles.wrapperProfile}>
         {listGladiator.slice(start, end).map((gladiator) => (
           <CardsProfile
@@ -40,20 +48,8 @@ const AllGladiator = () => {
           />
         ))}
       </div>
-      <Pagination
-        onChange={handlePagination}
-        current={currentPage}
-        pageSize={6}
-        total={totale}
-        locale={langLocal}
-        style={{ alignSelf: 'flex-end' }}
-      />
     </section>
   );
-};
-
-AllGladiator.propTypes = {
-  gladiators: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default AllGladiator;

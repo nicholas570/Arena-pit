@@ -1,13 +1,12 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import denariusIcon from '../assets/icons/coins.svg';
-
-import DenariusContext from '../context/DenariusContext';
 
 import styles from '../css/HeaderNav.module.css';
 
 function HeaderNav() {
-  const { denarius } = useContext(DenariusContext);
+  const token = JSON.parse(window.localStorage.getItem('Token'));
+
   return (
     <ul className={styles.container}>
       <Link to="/" className={styles.item}>
@@ -19,14 +18,14 @@ function HeaderNav() {
       <Link to="/about" className={styles.item}>
         <li>ABOUT</li>
       </Link>
-      <div className={styles.denarius}>
+      <li className={styles.denarius}>
         <img
           className={styles.iconDenarius}
           src={denariusIcon}
           alt="denarius icon"
         />
-        <p>{`${denarius} denarius`}</p>
-      </div>
+        <p>{`${token} denarius`}</p>
+      </li>
     </ul>
   );
 }

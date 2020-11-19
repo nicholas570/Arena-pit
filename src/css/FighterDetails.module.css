@@ -10,7 +10,7 @@
   display: flex;
   background-color: #e2e2e2;
   width: 70vw;
-  height: 50vh;
+  height: 55vh;
   margin-left: 15vw;
   justify-content: space-around;
 }
@@ -35,7 +35,7 @@
   position: absolute;
   z-index: 1;
   border-radius: 1000px;
-  border: 0.5rem solid #CC9D56;
+  border: 0.5rem solid #cc9d56;
 }
 .palme {
   max-width: 20vw;
@@ -87,7 +87,16 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 0;
+  background-color: #e2e2e2;
+  color: #323232;
+  padding: 1em;
+  border-radius: 200px;
 }
 .statsTitle {
   margin-bottom: 0;
+}
+
+.abilities {
+  border-radius: 100px;
+  margin-right: 0.5rem;
 }
