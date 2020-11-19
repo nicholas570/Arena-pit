@@ -50,7 +50,7 @@ function FighterDetails() {
           <h2 className={styles.name}>{gladiator.name}</h2>
         </div>
         <div className={styles.infos}>
-          <h2>Stats</h2>
+          <h2 className={styles.statsTitle}>Stats</h2>
           <ul className={styles.statsList}>
             <li className={styles.stats}>
               <img src={combat} alt="combat" />
