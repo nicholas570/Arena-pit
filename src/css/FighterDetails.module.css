@@ -7,7 +7,7 @@
 
 .fighterCard {
   display: flex;
-  background-color: #e2e2e2;
+  background-color: #fafafa;
   width: 70vw;
   height: 50vh;
   margin-left: 15vw;
@@ -30,16 +30,28 @@
 }
 
 .imageFighter {
-  max-width: 30vw;
+  max-width: 15vw;
+  position: absolute;
+  z-index: 1;
+  border-radius: 1000px;
+  border: #323232;
+  border: solid;
+  border-width: 0.5rem;
 }
-
+.palme {
+  max-width: 21vw;
+  z-index: 3;
+  transform: translateY(-2.7rem);
+}
 .name {
   background-color: #323232;
   color: #e2e2e2;
   padding: 1rem;
   margin-top: 0;
-  width: 20vw;
-  transform: translateY(-20px) skew(-18deg);
+  width: 10vw;
+  transform: translateY(-3.4em) skew(-18deg);
+  z-index: 4;
+  position: relative;
 }
 
 .infos {
