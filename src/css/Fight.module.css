@@ -4,8 +4,9 @@
   justify-content: space-around;
   align-items: center;
   width: 30vw;
-  height: 10vh;
+  height: 6vh;
   background-color: #323232;
   color: white;
   transform: skew(-18deg);
+  margin: 1em;
 }
