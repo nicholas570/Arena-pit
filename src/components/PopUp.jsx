@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect, createRef } from 'react';
 import PropTypes from 'prop-types';
 
 import { ListGladiateur } from '../context/GladiatorPovider';
@@ -9,11 +9,21 @@ import iconAdd from '../assets/icons/add.svg';
 import styles from '../css/PopUp.module.css';
 
 const PopUp = ({ setdisplay, id }) => {
+  const overlayRef = createRef(null);
   const listGladiateur = useContext(ListGladiateur);
   const [bet, setbet] = useState(10);
   const [token, setToken] = useState(window.localStorage.getItem('Token') - 10);
 
   const gladiator = listGladiateur.find((gladiateur) => gladiateur.id === id);
+
+  useEffect(() => {
+    overlayRef.current.style.top = `${window.scrollY}px`;
+    document.body.style.overflowY = 'hidden';
+
+    return () => {
+      document.body.style.overflowY = 'initial';
+    };
+  }, []);
 
   const handleIncrement = () => {
     setToken(Math.max(token, 1) - 1);
@@ -31,7 +41,7 @@ const PopUp = ({ setdisplay, id }) => {
   };
 
   return (
-    <div className={styles.overlay}>
+    <div ref={overlayRef} className={styles.overlay}>
       <div className={styles.popup}>
         <button
           onClick={() => setdisplay()}
