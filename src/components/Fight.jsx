@@ -2,11 +2,14 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 import styles from '../css/Fight.module.css';
+import Fighter from './Fighter';
 
 function Fight({ fighter1, fighter2 }) {
   const [active, setActive] = useState(true);
-  const randomRating1 = Math.round((Math.random() * 4 + 1) * 100) / 100;
-  const randomRating2 = Math.round((Math.random() * 4 + 1) * 100) / 100;
+
+  const handleActive = () => {
+    setActive(false);
+  };
 
   return (
     <div
@@ -14,29 +17,9 @@ function Fight({ fighter1, fighter2 }) {
         active ? styles.containerActive : styles.containerDisable
       }`}
     >
-      <div className={styles.wrapperFighter}>
-        <img className={styles.fighter} src={fighter1.picture} alt="fighter" />
-        <div>{`${fighter1.name} ${randomRating1}`}</div>
-        <button
-          type="button"
-          className={styles.btn}
-          onClick={() => setActive(false)}
-        >
-          BET
-        </button>
-      </div>
-      <div>VS</div>
-      <div className={styles.wrapperFighter}>
-        <img className={styles.fighter} src={fighter2.picture} alt="fighter" />
-        <div>{`${fighter2.name} ${randomRating2}`}</div>
-        <button
-          type="button"
-          className={styles.btn}
-          onClick={() => setActive(false)}
-        >
-          BET
-        </button>
-      </div>
+      <Fighter fighter={fighter1} handleActive={handleActive} />
+      <div className={styles.versus}>VS</div>
+      <Fighter fighter={fighter2} handleActive={handleActive} />
     </div>
   );
 }

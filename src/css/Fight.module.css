@@ -22,24 +22,8 @@
   margin: 1em;
 }
 
-.wrapperFighter {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  height: 100%;
-}
-
-.fighter {
-  border-radius: 13rem;
-  height: 150px;
-}
-
-.btn {
-  height: 2em;
-  width: 7em;
-  transform: skew(-30deg);
-  background-color: #cc9d56;
-  border: none;
-  font-size: 1rem;
+.versus {
+  font-size: 5rem;
+  font-weight: bold;
+  transform: skew(-18deg);
 }
