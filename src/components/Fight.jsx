@@ -13,14 +13,30 @@ function Fight({ fighter1, fighter2 }) {
       className={`${styles.container} ${
         active ? styles.containerActive : styles.containerDisable
       }`}
-      onClick={() => setActive(!active)}
     >
-      <div>{`${fighter1.name} ${randomRating1}`}</div>
-      <button type="button">BET</button>
+      <div className={styles.wrapperFighter}>
+        <img className={styles.fighter} src={fighter1.picture} alt="fighter" />
+        <div>{`${fighter1.name} ${randomRating1}`}</div>
+        <button
+          type="button"
+          className={styles.btn}
+          onClick={() => setActive(false)}
+        >
+          BET
+        </button>
+      </div>
       <div>VS</div>
-
-      <div>{`${fighter2.name} ${randomRating2}`}</div>
-      <button type="button">BET</button>
+      <div className={styles.wrapperFighter}>
+        <img className={styles.fighter} src={fighter2.picture} alt="fighter" />
+        <div>{`${fighter2.name} ${randomRating2}`}</div>
+        <button
+          type="button"
+          className={styles.btn}
+          onClick={() => setActive(false)}
+        >
+          BET
+        </button>
+      </div>
     </div>
   );
 }
