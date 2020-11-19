@@ -4,7 +4,9 @@ import Router from './Router';
 
 function App() {
   useEffect(() => {
-    window.localStorage.setItem('Token', 100);
+    if (localStorage.getItem('Token') === null) {
+      localStorage.setItem('Token', 100);
+    }
   }, []);
 
   return (
