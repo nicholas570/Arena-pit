@@ -1,17 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 import styles from '../css/Fight.module.css';
 
 function Fight({ fighter1, fighter2 }) {
+  const [active, setActive] = useState(true);
   const randomRating1 = Math.round((Math.random() * 4 + 1) * 100) / 100;
   const randomRating2 = Math.round((Math.random() * 4 + 1) * 100) / 100;
 
   return (
-    <div className={styles.container}>
+    <div
+      className={`${styles.container} ${
+        active ? styles.containerActive : styles.containerDisable
+      }`}
+      onClick={() => setActive(!active)}
+    >
       <div>{`${fighter1.name} ${randomRating1}`}</div>
+      <button type="button">BET</button>
       <div>VS</div>
+
       <div>{`${fighter2.name} ${randomRating2}`}</div>
+      <button type="button">BET</button>
     </div>
   );
 }
