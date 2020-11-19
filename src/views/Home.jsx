@@ -1,4 +1,5 @@
 import React from 'react';
+
 import AllGladiator from '../components/AllGladiator';
 
 import FavoriteGladiator from '../components/FavoriteGladiator';
