@@ -5,9 +5,10 @@ import styles from '../css/NextFight.module.css';
 function NextFight() {
   return (
     <div className={styles.container}>
-      <div>fighter 1</div>
-      <div>VS</div>
-      <div>fighter 2</div>
+      <h2 className={styles.bannerNextFight}>Next fight</h2>
+      <div className={styles.fighter}>fighter 1</div>
+      <div className={styles.versus}>VS</div>
+      <div className={styles.fighter}>fighter 2</div>
     </div>
   );
 }
