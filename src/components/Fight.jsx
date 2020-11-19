@@ -16,8 +16,11 @@ function Fight({ fighter1, fighter2 }) {
       onClick={() => setActive(!active)}
     >
       <div>{`${fighter1.name} ${randomRating1}`}</div>
+      <button type="button">BET</button>
       <div>VS</div>
+
       <div>{`${fighter2.name} ${randomRating2}`}</div>
+      <button type="button">BET</button>
     </div>
   );
 }
