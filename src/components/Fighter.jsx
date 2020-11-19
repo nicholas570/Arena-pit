@@ -28,7 +28,11 @@ function Fighter({ fighter, handleActive }) {
           alt="alt"
         />
         <div>{`${fighter.name} ${randomRating}`}</div>
-        <button type="button" className={styles.btn} onClick={handleActive}>
+        <button
+          type="button"
+          className={styles.btn}
+          onClick={() => handleActive(fighter.id)}
+        >
           BET
         </button>
       </div>
