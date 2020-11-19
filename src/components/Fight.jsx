@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import styles from '../css/Fight.module.css';
 import Fighter from './Fighter';
 
-function Fight({ fighter1, fighter2 }) {
+function Fight({ fighter1, fighter2, fetchBet }) {
   const [active, setActive] = useState(true);
 
   const handleActive = () => {
@@ -47,5 +47,6 @@ Fight.propTypes = {
     strength: PropTypes.string,
     picture: PropTypes.string,
   }).isRequired,
+  fetchBet: PropTypes.func.isRequired,
 };
 export default Fight;
