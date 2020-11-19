@@ -1,0 +1,51 @@
+.fighterDetails {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Open Sans', sans-serif;
+  margin-top: 5em;
+}
+
+.fighterCard {
+  display: flex;
+  background-color: #e2e2e2;
+  width: 70vw;
+  height: 60vh;
+  margin-left: 15vw;
+}
+
+.profil {
+  margin: 3em;
+}
+
+.imageFighter {
+  max-width: 30vw;
+}
+
+.name {
+  background-color: #323232;
+  color: #e2e2e2;
+  padding: 1rem;
+  margin-top: 0;
+  width: 20vw;
+  transform: translateY(-20px) skew(-18deg);
+}
+
+.infos {
+  margin: 3em;
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.statsList {
+  text-align: justify;
+}
+
+.rating {
+  background-color: #323232;
+  color: #e2e2e2;
+  width: 10vw;
+  transform: skew(-18deg);
+  font-weight: bold;
+  padding: 1rem;
+}
