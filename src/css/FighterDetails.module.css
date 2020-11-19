@@ -38,7 +38,7 @@
   border: 0.5rem solid #CC9D56;
 }
 .palme {
-  max-width: 21vw;
+  max-width: 20vw;
   z-index: 3;
   transform: translateY(-1.7rem);
 }
