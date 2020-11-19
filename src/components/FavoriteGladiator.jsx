@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { ListGladiateur } from '../context/GladiatorPovider';
 import styles from '../css/FavoriteGladiator.module.css';
 
-import listGladiator from '../Gladiators';
-
 function FavoriteGladiator() {
+  const listGladiator = useContext(ListGladiateur);
   const randomId = Math.floor(Math.random() * 13) + 1;
   const randomRating = Math.round((Math.random() * 4 + 1) * 100) / 100;
 

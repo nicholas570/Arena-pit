@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import { useParams } from 'react-router-dom';
 
-import Gladiators from '../Gladiators';
+import { ListGladiateur } from '../context/GladiatorPovider';
 
 import iconNotFavorite from '../assets/icons/favorite_border.svg';
 import iconFavorite from '../assets/icons/favorite.svg';
@@ -16,6 +16,7 @@ import strength from '../assets/icons/Strength.webp';
 import styles from '../css/FighterDetails.module.css';
 
 function FighterDetails() {
+  const listGladiator = useContext(ListGladiateur);
   const [gladiator, setgladiator] = useState({});
   const [isFavourite, setisFavourite] = useState(false);
 
@@ -24,7 +25,7 @@ function FighterDetails() {
   const { id } = useParams();
 
   useEffect(() => {
-    const currentGladiator = Gladiators.find(
+    const currentGladiator = listGladiator.find(
       (element) => element.id === parseInt(id, 10)
     );
 
