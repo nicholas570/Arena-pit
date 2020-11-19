@@ -1,0 +1,38 @@
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #323232;
+  color: white;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  text-align: left;
+  font-family: 'Open Sans', sans-serif;
+}
+.titleFooter {
+  margin-right: 2rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.github {
+  color: white;
+  text-decoration: none;
+}
+
+.development {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.contacUs {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
