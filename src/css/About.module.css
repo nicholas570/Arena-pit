@@ -1,0 +1,27 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Open Sans', sans-serif;
+  height: 78vh;
+}
+
+.aboutTitle {
+  background-color: #cc9d56;
+  color: #fff;
+  padding: 1rem;
+  transform: skew(-5deg);
+  max-width: 18rem;
+}
+
+.textContainer {
+  background-color: #e2e2e2;
+  width: 70vw;
+  padding: 1em;
+  border-radius: 5px;
+}
+
+.spqr {
+  margin-top: 2em;
+  max-width: 20vw;
+}
