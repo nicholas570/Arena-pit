@@ -39,7 +39,7 @@ const AllGladiator = ({ gladiators }) => {
                 key={gladiator.id}
                 name={gladiator.name}
                 id={gladiator.id}
-                image={gladiator.image}
+                image={gladiator.picture}
               />
             ))
         ) : (
