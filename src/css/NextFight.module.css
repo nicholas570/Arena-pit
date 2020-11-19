@@ -3,9 +3,33 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  width: 30vw;
+  width: 80vw;
+  max-width: 50rem;
   height: 10vh;
   background-color: #323232;
   color: white;
   transform: skew(-18deg);
+  position: relative;
+}
+
+.bannerNextFight {
+  position: absolute;
+  top: -3.25rem;
+  left: -3rem;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #df2e2f;
+  padding: 1rem;
+  transform: skew(-5deg);
+  max-width: 18rem;
+}
+
+.fighter {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.versus {
+  font-size: 1.8rem;
+  font-weight: bold;
 }
