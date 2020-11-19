@@ -17,7 +17,7 @@ function FavoriteGladiator() {
             </div>
             <img
               className={styles.gladiatorPicture}
-              src="https://via.placeholder.com/200"
+              src={gladiator.picture}
               alt={gladiator.name}
             />
             <h3 className={styles.gladiatorName}>{gladiator.name}</h3>

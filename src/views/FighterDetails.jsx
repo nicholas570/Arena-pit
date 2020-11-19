@@ -12,6 +12,8 @@ function FighterDetails() {
   const [gladiator, setgladiator] = useState({});
   const [isFavourite, setisFavourite] = useState(false);
 
+  const randomRating = Math.round((Math.random() * 4 + 1) * 100) / 100;
+
   const { id } = useParams();
 
   useEffect(() => {
@@ -33,7 +35,7 @@ function FighterDetails() {
         <div className={styles.profil}>
           <img
             className={styles.imageFighter}
-            src="https://cdn-media.rtl.fr/cache/WhjOcNWyILbkM5QVwIBkhA/880v587-0/online/image/2018/1102/7795414354_gladiator-avait-ete-recompense-de-5-oscars-lors-de-sa-sortie.jpg"
+            src={gladiator.picture}
             alt={gladiator.name}
           />
           <h2 className={styles.name}>{gladiator.name}</h2>
@@ -66,7 +68,7 @@ function FighterDetails() {
               {gladiator.strength}
             </li>
           </ul>
-          <p className={styles.rating}>Rating: /5</p>
+          <p className={styles.rating}>Rating: {randomRating}/5</p>
         </div>
       </div>
     </div>

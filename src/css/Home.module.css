@@ -6,10 +6,6 @@
   height: 78vh;
 }
 
-.top {
-  width: 100vw;
-}
-
 .wrapperFighters {
   display: flex;
   flex-direction: row;
@@ -22,5 +18,4 @@
   padding: 1rem;
   transform: skew(-18deg);
   max-width: 18rem;
-  margin-left: 16em;
 }
