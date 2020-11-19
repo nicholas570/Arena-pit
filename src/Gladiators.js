@@ -155,6 +155,18 @@ const GLADIATORS = [
     picture:
       'https://images.generated.photos/hGlMBrFuLHygXuC-Klj7WjbnNporvUbbNKrG_8X5F7s/rs:fit:512:512/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzAwNzU4MjguanBn.jpg',
   },
+  {
+    id: 14,
+    name: 'Nicolus',
+    combat: '70',
+    durability: '80',
+    intelligence: '90',
+    power: '85',
+    speed: '90',
+    strength: '100',
+    picture:
+      'https://images.generated.photos/5JKQxPv4i-qyurCFkTmv9noGGwRHGAJErGv9mU7VE1k/rs:fit:512:512/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzA3MzE4NzIuanBn.jpg',
+  },
 ];
 
 export default GLADIATORS;
