@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import { useParams } from 'react-router-dom';
 
-import Gladiators from '../Gladiators';
+import { ListGladiateur } from '../context/GladiatorPovider';
 
 import iconNotFavorite from '../assets/icons/favorite_border.svg';
 import iconFavorite from '../assets/icons/favorite.svg';
@@ -16,6 +16,7 @@ import strength from '../assets/icons/Strength.webp';
 import styles from '../css/FighterDetails.module.css';
 
 function FighterDetails() {
+  const listGladiator = useContext(ListGladiateur);
   const [gladiator, setgladiator] = useState({});
   const [isFavourite, setisFavourite] = useState(false);
 
@@ -24,7 +25,7 @@ function FighterDetails() {
   const { id } = useParams();
 
   useEffect(() => {
-    const currentGladiator = Gladiators.find(
+    const currentGladiator = listGladiator.find(
       (element) => element.id === parseInt(id, 10)
     );
 
@@ -54,36 +55,35 @@ function FighterDetails() {
           <ul className={styles.statsList}>
             <li className={styles.stats}>
               <img src={combat} alt="combat" />
-              Combat:
-              {gladiator.combat}
+              {`Combat : 
+              ${gladiator.combat}`}
             </li>
             <li className={styles.stats}>
               <img src={durability} alt="durability" />
-              Durability:
-              {gladiator.durability}
+              {`Durability : 
+              ${gladiator.durability}`}
             </li>
             <li className={styles.stats}>
               <img src={intelligence} alt="intelligence" />
-              Intelligence:
-              {gladiator.intelligence}
+              {`Intelligence : ${gladiator.intelligence}`}
             </li>
             <li className={styles.stats}>
               <img src={power} alt="power" />
-              Power:
-              {gladiator.power}
+              {`Power : 
+              ${gladiator.power}`}
             </li>
             <li className={styles.stats}>
               <img src={speed} alt="speed" />
-              Speed:
-              {gladiator.speed}
+              {`Speed:
+              ${gladiator.speed}`}
             </li>
             <li className={styles.stats}>
               <img src={strength} alt="strength" />
-              Strength:
-              {gladiator.strength}
+              {`Strength : 
+              ${gladiator.strength}`}
             </li>
           </ul>
-          <p className={styles.rating}>Rating: {randomRating}/5</p>
+          <p className={styles.rating}>{`Rating : ${randomRating}/5`}</p>
         </div>
       </div>
     </div>
