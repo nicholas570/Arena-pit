@@ -1,12 +1,10 @@
 import React from 'react';
+import AllGladiator from '../components/AllGladiator';
+
 import FavoriteGladiator from '../components/FavoriteGladiator';
 import NextFight from '../components/NextFight';
 
 import styles from '../css/Home.module.css';
-
-import CardsProfile from '../components/CardProfile';
-
-import listGladiator from '../Gladiators';
 
 function Home() {
   return (
@@ -16,11 +14,7 @@ function Home() {
         <h2 className={styles.wrapperProfileTitle}>Top Gladiators</h2>
       </div>
       <div className={styles.wrapperFighters}>
-        <div className={styles.wrapperProfile}>
-          {listGladiator.slice(0, 6).map((gladiator) => (
-            <CardsProfile key={gladiator.id} name={gladiator.name} />
-          ))}
-        </div>
+        <AllGladiator />
         <FavoriteGladiator />
       </div>
     </div>
