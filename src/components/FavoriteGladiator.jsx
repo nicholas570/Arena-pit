@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from '../css/FavoriteGladiator.module.css';
+import palme from '../assets/icons/palmeor.png';
 
 import listGladiator from '../Gladiators';
 
@@ -20,6 +21,8 @@ function FavoriteGladiator() {
               src={gladiator.picture}
               alt={gladiator.name}
             />
+            <img className={styles.palme} src={palme} alt="alt" />
+
             <h3 className={styles.gladiatorName}>{gladiator.name}</h3>
             <p className={styles.gladiatorRating}>{`${randomRating} /5`}</p>
           </div>
