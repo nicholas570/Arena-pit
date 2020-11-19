@@ -6,7 +6,7 @@ import palme from '../assets/icons/palmeor.png';
 import styles from '../css/Fighter.module.css';
 
 function Fighter({ fighter, handleActive }) {
-  const [isWinner, setIsWinner] = useState(true);
+  const [isWinner, setIsWinner] = useState(false);
 
   const randomRating = Math.round((Math.random() * 4 + 1) * 100) / 100;
 
