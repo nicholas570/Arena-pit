@@ -3,9 +3,9 @@ import React, { useState, useContext } from 'react';
 import { ListGladiateur } from '../context/GladiatorPovider';
 
 import Fight from '../components/Fight';
+import PopUp from '../components/PopUp';
 
 import styles from '../css/WeekFight.module.css';
-import PopUp from '../components/PopUp';
 
 function WeekFights() {
   const Gladiators = useContext(ListGladiateur);
