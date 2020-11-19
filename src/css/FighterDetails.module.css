@@ -1,0 +1,9 @@
+.fighterCard {
+  display: flex;
+  background-color: #e2e2e2;
+}
+
+.profil {
+  background-color: #323232;
+  color: #e2e2e2;
+}
