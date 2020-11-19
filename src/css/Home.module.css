@@ -6,6 +6,15 @@
   height: 78vh;
 }
 
+.top {
+  width: 100vw;
+}
+
+.wrapperFighters {
+  display: flex;
+  flex-direction: row;
+}
+
 .wrapperProfile {
   display: flex;
   flex-wrap: wrap;
@@ -19,4 +28,6 @@
   background-color: #df2e2f;
   padding: 1rem;
   transform: skew(-18deg);
+  max-width: 18rem;
+  margin-left: 16em;
 }
