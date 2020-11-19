@@ -1,0 +1,41 @@
+.fighterDetails {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Open Sans', sans-serif;
+  margin-top: 5em;
+}
+
+.fighterCard {
+  display: flex;
+  background-color: #e2e2e2;
+  width: 70vw;
+  height: 60vh;
+  margin-left: 15vw;
+}
+
+.profil {
+  background-color: #323232;
+  color: #e2e2e2;
+  margin: 3em;
+}
+
+.imageFighter {
+  max-width: 30vw;
+}
+
+.infos {
+  margin: 3em;
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.statsList {
+  text-align: justify;
+}
+
+.rating {
+  background-color: #323232;
+  color: #e2e2e2;
+  width: 10vw;
+}
