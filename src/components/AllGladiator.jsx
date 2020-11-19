@@ -30,6 +30,15 @@ const AllGladiator = () => {
   const { currentPage, start, end } = cursor;
   return (
     <section className={styles.allGladiator}>
+      <Pagination
+        className={styles.pagination}
+        onChange={handlePagination}
+        current={currentPage}
+        pageSize={6}
+        total={totale}
+        locale={langLocal}
+        style={{ alignSelf: 'flex-end' }}
+      />
       <div className={styles.wrapperProfile}>
         {listGladiator.slice(start, end).map((gladiator) => (
           <CardsProfile
@@ -40,14 +49,6 @@ const AllGladiator = () => {
           />
         ))}
       </div>
-      <Pagination
-        onChange={handlePagination}
-        current={currentPage}
-        pageSize={6}
-        total={totale}
-        locale={langLocal}
-        style={{ alignSelf: 'flex-end' }}
-      />
     </section>
   );
 };
