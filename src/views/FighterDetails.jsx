@@ -5,6 +5,7 @@ import Gladiators from '../Gladiators';
 
 import iconNotFavorite from '../assets/icons/favorite_border.svg';
 import iconFavorite from '../assets/icons/favorite.svg';
+import palme from '../assets/icons/palmeor.png';
 
 import styles from '../css/FighterDetails.module.css';
 
@@ -38,6 +39,8 @@ function FighterDetails() {
             src={gladiator.picture}
             alt={gladiator.name}
           />
+          <img className={styles.palme} src={palme} alt="alt" />
+
           <h2 className={styles.name}>{gladiator.name}</h2>
         </div>
         <div className={styles.infos}>
