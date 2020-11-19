@@ -25,7 +25,9 @@
   margin: 0.8rem;
 }
 .gladiatorPicture {
-  margin: 1.5rem 0;
+  margin: 1.4rem 0;
+  height: 13rem;
+  border-radius: 5px;
 }
 
 .gladiatorName {
