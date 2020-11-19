@@ -7,8 +7,9 @@ import Fighter from './Fighter';
 function Fight({ fighter1, fighter2, fetchBet }) {
   const [active, setActive] = useState(true);
 
-  const handleActive = () => {
+  const handleActive = (idGladiator) => {
     setActive(false);
+    fetchBet(idGladiator);
   };
 
   return (
@@ -17,9 +18,15 @@ function Fight({ fighter1, fighter2, fetchBet }) {
         active ? styles.containerActive : styles.containerDisable
       }`}
     >
-      <Fighter fighter={fighter1} handleActive={handleActive} />
+      <Fighter
+        fighter={fighter1}
+        handleActive={(idGladiator) => handleActive(idGladiator)}
+      />
       <div className={styles.versus}>VS</div>
-      <Fighter fighter={fighter2} handleActive={handleActive} />
+      <Fighter
+        fighter={fighter2}
+        handleActive={(idGladiator) => handleActive(idGladiator)}
+      />
     </div>
   );
 }

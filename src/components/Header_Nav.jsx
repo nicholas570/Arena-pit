@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
-import money from '../assets/icons/money.svg';
+import denariusIcon from '../assets/icons/coins.svg';
 
 import styles from '../css/HeaderNav.module.css';
 
@@ -19,9 +18,13 @@ function HeaderNav() {
       <Link to="/about" className={styles.item}>
         <li>ABOUT</li>
       </Link>
-      <li>
-        <img src={money} alt="money" className={styles.money} />
-        {token}
+      <li className={styles.denarius}>
+        <img
+          className={styles.iconDenarius}
+          src={denariusIcon}
+          alt="denarius icon"
+        />
+        <p>{`${token} denarius`}</p>
       </li>
     </ul>
   );

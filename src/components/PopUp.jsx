@@ -37,7 +37,7 @@ const PopUp = ({ setdisplay, id }) => {
           <span className={styles.bet}>{bet}</span>
           <button
             className={styles.iconButton}
-            onClick={(e) => setbet(bet + 1)}
+            onClick={() => setbet(bet + 1)}
             type="button"
           >
             <img src={iconAdd} alt="icon add" />
