@@ -6,6 +6,8 @@
   width: 30vw;
   font-size: 1rem;
   list-style-type: none;
+  font-style: italic;
+  font-weight: bold;
 }
 
 .item {
