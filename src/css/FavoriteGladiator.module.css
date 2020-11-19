@@ -1,6 +1,44 @@
 .favCard {
-  background-color: #df2e2e;
+  background-color: #df2e2f;
   border-radius: 5px;
-  height: 50%;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-style: italic;
+  height: 22rem;
+  width: 25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem;
 }
 
+.favTitleBloc {
+  margin-top: 1rem;
+  padding: 0 1rem;
+  background: #323232;
+  transform: skew(-30deg);
+}
+
+.favTitle {
+  transform: skew(30deg);
+  font-size: 1.3rem;
+  margin: 0.8rem;
+}
+.gladiatorPicture {
+  margin: 2rem 0;
+  height: 50%;
+  width: 60%;
+  background-color: #323232;
+}
+
+.gladiatorName {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.gladiatorRating {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0.8rem;
+}
