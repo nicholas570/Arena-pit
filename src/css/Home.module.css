@@ -5,3 +5,18 @@
   justify-content: center;
   height: 78vh;
 }
+
+.wrapperProfile {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 45rem;
+  max-height: 30rem;
+}
+
+.wrapperProfileTitle {
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #df2e2f;
+  padding: 1rem;
+  transform: skew(-18deg);
+}
