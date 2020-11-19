@@ -14,13 +14,20 @@
 }
 
 .profil {
-  background-color: #323232;
-  color: #e2e2e2;
   margin: 3em;
 }
 
 .imageFighter {
   max-width: 30vw;
+}
+
+.name {
+  background-color: #323232;
+  color: #e2e2e2;
+  padding: 1rem;
+  margin-top: 0;
+  width: 20vw;
+  transform: translateY(-20px) skew(-18deg);
 }
 
 .infos {
@@ -38,4 +45,7 @@
   background-color: #323232;
   color: #e2e2e2;
   width: 10vw;
+  transform: skew(-18deg);
+  font-weight: bold;
+  padding: 1rem;
 }

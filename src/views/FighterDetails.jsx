@@ -13,8 +13,7 @@ function FighterDetails() {
             src="https://cdn-media.rtl.fr/cache/WhjOcNWyILbkM5QVwIBkhA/880v587-0/online/image/2018/1102/7795414354_gladiator-avait-ete-recompense-de-5-oscars-lors-de-sa-sortie.jpg"
             alt={Gladiators[0].name}
           />
-          <h2>{Gladiators[0].name}</h2>
-          <p>Rating: /5</p>
+          <h2 className={styles.name}>{Gladiators[0].name}</h2>
         </div>
         <div className={styles.infos}>
           <h2>Stats</h2>
