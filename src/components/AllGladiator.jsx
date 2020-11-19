@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import PropTypes from 'prop-types';
+
 import Pagination from 'rc-pagination';
 import langLocal from 'rc-pagination/es/locale/en_US';
 import 'rc-pagination/assets/index.css';
@@ -10,23 +11,11 @@ import CardsProfile from './CardProfile';
 
 import styles from '../css/AllGladiator.module.css';
 
-const AllGladiator = () => {
+const AllGladiator = ({ gladiators }) => {
   const [totale, settotale] = useState(0);
   const [cursor, setcursor] = useState({ currentPage: 1, start: 0, end: 6 });
-  const [gladiators, setGladiators] = useState();
 
   useEffect(() => {
-    axios
-      .get('https://randomuser.me/api/?results=13')
-      .then(({ data: { results } }) => {
-        const result = results.map((profil, i) => {
-          return { ...listGladiator[i], image: profil.picture.large };
-        });
-        setGladiators(result);
-      })
-      .catch((err) => {
-        alert(err);
-      });
     settotale(listGladiator.length);
   }, []);
 
@@ -67,6 +56,10 @@ const AllGladiator = () => {
       />
     </section>
   );
+};
+
+AllGladiator.propTypes = {
+  gladiators: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default AllGladiator;
