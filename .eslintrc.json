@@ -18,6 +18,11 @@
   "plugins": ["react"],
   "rules": {
     "react/jsx-no-bind": [1, { "allowArrowFunctions": true }],
-    "class-methods-use-this": "off"
+    "react/jsx-props-no-spreading": [
+      2,
+      {
+        "exceptions": ["Route", "Component", "Layout"]
+      }
+    ]
   }
 }
