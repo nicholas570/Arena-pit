@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useContext } from 'react';
-import PropTypes from 'prop-types';
 
 import Pagination from 'rc-pagination';
 import langLocal from 'rc-pagination/es/locale/en_US';
@@ -51,10 +50,6 @@ const AllGladiator = () => {
       </div>
     </section>
   );
-};
-
-AllGladiator.propTypes = {
-  gladiators: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default AllGladiator;
