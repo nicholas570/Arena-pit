@@ -35,7 +35,7 @@ function FighterDetails() {
         <div className={styles.profil}>
           <img
             className={styles.imageFighter}
-            src="https://cdn-media.rtl.fr/cache/WhjOcNWyILbkM5QVwIBkhA/880v587-0/online/image/2018/1102/7795414354_gladiator-avait-ete-recompense-de-5-oscars-lors-de-sa-sortie.jpg"
+            src={gladiator.picture}
             alt={gladiator.name}
           />
           <h2 className={styles.name}>{gladiator.name}</h2>
