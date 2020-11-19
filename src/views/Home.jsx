@@ -11,11 +11,11 @@ function Home() {
   return (
     <div className={styles.container}>
       <NextFight />
-      <div className={styles.top}>
-        <h2 className={styles.wrapperProfileTitle}>Top Gladiators</h2>
-      </div>
       <div className={styles.wrapperFighters}>
-        <AllGladiator gladiators={listGladiator} />
+        <div>
+          <h2 className={styles.wrapperProfileTitle}>Top Gladiators</h2>
+          <AllGladiator gladiators={listGladiator} />
+        </div>
         <FavoriteGladiator />
       </div>
     </div>

@@ -14,7 +14,13 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 0;
+  bottom: -1rem;
+  color: #fff;
+  background-color: #cc9d56;
+  width: 100%;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  padding: 0.3rem 0;
 }
 
 .favourite {
