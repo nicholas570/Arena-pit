@@ -31,15 +31,21 @@
   border-radius: 5px;
   border-radius: 100%;
 }
-
+.palme {
+  max-width: 18em;
+  z-index: 3;
+  transform: translateY(-17rem);
+}
 .gladiatorName {
   font-size: 1.8rem;
   font-weight: 700;
   margin: 0;
+  transform: translateY(-18.3rem);
 }
 
 .gladiatorRating {
   font-size: 1.5rem;
   font-weight: 700;
   margin: 0.8rem;
+  transform: translateY(-18.3rem);
 }
