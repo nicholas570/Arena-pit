@@ -1,5 +1,6 @@
 const GLADIATORS = [
   {
+    id: 1,
     name: 'Maximus',
     combat: '20',
     durability: '5',
@@ -9,6 +10,7 @@ const GLADIATORS = [
     strength: '8',
   },
   {
+    id: 2,
     name: 'Bricius',
     combat: '95',
     durability: '80',
@@ -18,6 +20,7 @@ const GLADIATORS = [
     strength: '28',
   },
   {
+    id: 3,
     name: 'Nicolus',
     combat: '95',
     durability: '90',
@@ -27,6 +30,7 @@ const GLADIATORS = [
     strength: '80',
   },
   {
+    id: 4,
     name: 'Francius',
     combat: '64',
     durability: '80',
@@ -36,6 +40,7 @@ const GLADIATORS = [
     strength: '100',
   },
   {
+    id: 5,
     name: 'Aymericus',
     combat: '64',
     durability: '100',
@@ -45,6 +50,7 @@ const GLADIATORS = [
     strength: '80',
   },
   {
+    id: 6,
     name: 'Florius',
     combat: '95',
     durability: '80',
@@ -54,6 +60,7 @@ const GLADIATORS = [
     strength: '28',
   },
   {
+    id: 7,
     name: 'Baptus',
     combat: '50',
     durability: '40',
@@ -63,6 +70,7 @@ const GLADIATORS = [
     strength: '10',
   },
   {
+    id: 8,
     name: 'Gwenvaelius',
     combat: '55',
     durability: '100',
@@ -72,6 +80,7 @@ const GLADIATORS = [
     strength: '63',
   },
   {
+    id: 9,
     name: 'Thomus',
     combat: '65',
     durability: '64',
@@ -81,6 +90,7 @@ const GLADIATORS = [
     strength: '90',
   },
   {
+    id: 10,
     name: 'Benitus',
     combat: '64',
     durability: '100',
@@ -90,6 +100,7 @@ const GLADIATORS = [
     strength: '10',
   },
   {
+    id: 11,
     name: 'Florius',
     combat: '85',
     durability: '65',
@@ -99,6 +110,7 @@ const GLADIATORS = [
     strength: '28',
   },
   {
+    id: 12,
     name: 'Loïcius',
     combat: '40',
     durability: '85',
@@ -108,6 +120,7 @@ const GLADIATORS = [
     strength: '85',
   },
   {
+    id: 13,
     name: 'Bastus',
     combat: '90',
     durability: '85',
