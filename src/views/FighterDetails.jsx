@@ -12,6 +12,8 @@ function FighterDetails() {
   const [gladiator, setgladiator] = useState({});
   const [isFavourite, setisFavourite] = useState(false);
 
+  const randomRating = Math.round((Math.random() * 4 + 1) * 100) / 100;
+
   const { id } = useParams();
 
   useEffect(() => {
@@ -66,7 +68,7 @@ function FighterDetails() {
               {gladiator.strength}
             </li>
           </ul>
-          <p className={styles.rating}>Rating: /5</p>
+          <p className={styles.rating}>Rating: {randomRating}/5</p>
         </div>
       </div>
     </div>
