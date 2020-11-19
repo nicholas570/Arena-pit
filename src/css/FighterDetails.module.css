@@ -3,7 +3,7 @@
   flex-direction: column;
   font-family: 'Open Sans', sans-serif;
   margin-top: 5em;
-  height: 70vh;
+  height: 68.8vh;
 }
 
 .fighterCard {
@@ -35,7 +35,7 @@
   position: absolute;
   z-index: 1;
   border-radius: 1000px;
-  border: 0.5rem solid #CC9D56;
+  border: 0.5rem solid #cc9d56;
 }
 .palme {
   max-width: 20vw;
