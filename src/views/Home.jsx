@@ -12,17 +12,17 @@ function Home() {
   return (
     <div className={styles.container}>
       <NextFight />
-      <h2 className={styles.wrapperProfileTitle}>Top Gladiators</h2>
-      <div className={styles.wrapperProfile}>
-        {listGladiator.slice(0, 6).map((gladiator) => (
-          <CardsProfile
-            key={gladiator.id}
-            name={gladiator.name}
-            id={gladiator.id}
-          />
-        ))}
+      <div className={styles.top}>
+        <h2 className={styles.wrapperProfileTitle}>Top Gladiators</h2>
       </div>
-      <FavoriteGladiator />
+      <div className={styles.wrapperFighters}>
+        <div className={styles.wrapperProfile}>
+          {listGladiator.slice(0, 6).map((gladiator) => (
+            <CardsProfile key={gladiator.id} name={gladiator.name} />
+          ))}
+        </div>
+        <FavoriteGladiator />
+      </div>
     </div>
   );
 }
