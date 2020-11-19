@@ -4,7 +4,7 @@
   color: white;
   font-family: 'Open Sans', sans-serif;
   font-style: italic;
-  height: 22rem;
+  height: 25rem;
   width: 25rem;
   display: flex;
   flex-direction: column;
@@ -25,10 +25,7 @@
   margin: 0.8rem;
 }
 .gladiatorPicture {
-  margin: 2rem 0;
-  height: 50%;
-  width: 60%;
-  background-color: #323232;
+  margin: 1.5rem 0;
 }
 
 .gladiatorName {
