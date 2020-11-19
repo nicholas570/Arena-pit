@@ -4,6 +4,7 @@
   justify-content: space-around;
   align-items: center;
   width: 80vw;
+  max-width: 50rem;
   height: 10vh;
   background-color: #323232;
   color: white;
