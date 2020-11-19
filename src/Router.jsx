@@ -27,7 +27,7 @@ function Router() {
       <Switch>
         <LayoutedRoute exact path="/" component={Home} layout={LayoutedView} />
         <LayoutedRoute
-          path="/fighterdetails"
+          path="/fighterdetails/:id"
           component={FighterDetails}
           layout={LayoutedView}
         />
