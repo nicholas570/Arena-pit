@@ -1,14 +1,30 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+
+import listGladiator from '../Gladiators';
+import AllGladiator from '../components/AllGladiator';
 import FavoriteGladiator from '../components/FavoriteGladiator';
 import NextFight from '../components/NextFight';
 
 import styles from '../css/Home.module.css';
 
-import CardsProfile from '../components/CardProfile';
-
-import listGladiator from '../Gladiators';
-
 function Home() {
+  const [gladiators, setGladiators] = useState();
+
+  useEffect(() => {
+    axios
+      .get('https://randomuser.me/api/?results=13')
+      .then(({ data: { results } }) => {
+        const result = results.map((profil, i) => {
+          return { ...listGladiator[i], image: profil.picture.large };
+        });
+        setGladiators(result);
+      })
+      .catch((err) => {
+        alert(err);
+      });
+  }, []);
+
   return (
     <div className={styles.container}>
       <NextFight />
@@ -16,11 +32,7 @@ function Home() {
         <h2 className={styles.wrapperProfileTitle}>Top Gladiators</h2>
       </div>
       <div className={styles.wrapperFighters}>
-        <div className={styles.wrapperProfile}>
-          {listGladiator.slice(0, 6).map((gladiator) => (
-            <CardsProfile key={gladiator.id} name={gladiator.name} />
-          ))}
-        </div>
+        <AllGladiator gladiators={gladiators} />
         <FavoriteGladiator />
       </div>
     </div>
