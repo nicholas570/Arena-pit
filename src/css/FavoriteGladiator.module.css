@@ -32,9 +32,10 @@
   border-radius: 100%;
 }
 .palme {
-  max-width: 18em;
+  max-width: 17em;
   z-index: 3;
-  transform: translateY(-17rem);
+  transform: translateY(-16rem);
+  margin-bottom: 1.2rem;
 }
 .gladiatorName {
   font-size: 1.8rem;

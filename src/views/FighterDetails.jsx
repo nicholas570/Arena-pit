@@ -55,36 +55,35 @@ function FighterDetails() {
           <ul className={styles.statsList}>
             <li className={styles.stats}>
               <img src={combat} alt="combat" />
-              Combat:
-              {gladiator.combat}
+              {`Combat : 
+              ${gladiator.combat}`}
             </li>
             <li className={styles.stats}>
               <img src={durability} alt="durability" />
-              Durability:
-              {gladiator.durability}
+              {`Durability : 
+              ${gladiator.durability}`}
             </li>
             <li className={styles.stats}>
               <img src={intelligence} alt="intelligence" />
-              Intelligence:
-              {gladiator.intelligence}
+              {`Intelligence : ${gladiator.intelligence}`}
             </li>
             <li className={styles.stats}>
               <img src={power} alt="power" />
-              Power:
-              {gladiator.power}
+              {`Power : 
+              ${gladiator.power}`}
             </li>
             <li className={styles.stats}>
               <img src={speed} alt="speed" />
-              Speed:
-              {gladiator.speed}
+              {`Speed:
+              ${gladiator.speed}`}
             </li>
             <li className={styles.stats}>
               <img src={strength} alt="strength" />
-              Strength:
-              {gladiator.strength}
+              {`Strength : 
+              ${gladiator.strength}`}
             </li>
           </ul>
-          <p className={styles.rating}>Rating: {randomRating}/5</p>
+          <p className={styles.rating}>{`Rating : ${randomRating}/5`}</p>
         </div>
       </div>
     </div>

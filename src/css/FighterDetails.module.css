@@ -3,7 +3,7 @@
   flex-direction: column;
   font-family: 'Open Sans', sans-serif;
   margin-top: 5em;
-  height: 70vh;
+  height: 68.8vh;
 }
 
 .fighterCard {
@@ -31,18 +31,16 @@
 }
 
 .imageFighter {
-  max-width: 15vw;
+  max-width: 14vw;
   position: absolute;
   z-index: 1;
   border-radius: 1000px;
-  border: #323232;
-  border: solid;
-  border-width: 0.5rem;
+  border: 0.5rem solid #cc9d56;
 }
 .palme {
-  max-width: 21vw;
+  max-width: 20vw;
   z-index: 3;
-  transform: translateY(-2.7rem);
+  transform: translateY(-1.7rem);
 }
 .name {
   background-color: #323232;
