@@ -1,19 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import PropTypes from 'prop-types';
 
 import Pagination from 'rc-pagination';
 import langLocal from 'rc-pagination/es/locale/en_US';
 import 'rc-pagination/assets/index.css';
 
-import listGladiator from '../Gladiators';
-
+import { ListGladiateur } from '../context/GladiatorPovider';
 import CardsProfile from './CardProfile';
 
 import styles from '../css/AllGladiator.module.css';
 
-const AllGladiator = ({ gladiators }) => {
+const AllGladiator = () => {
   const [totale, settotale] = useState(0);
   const [cursor, setcursor] = useState({ currentPage: 1, start: 0, end: 6 });
+  const listGladiator = useContext(ListGladiateur);
 
   useEffect(() => {
     settotale(listGladiator.length);
@@ -31,20 +31,14 @@ const AllGladiator = ({ gladiators }) => {
   return (
     <section className={styles.allGladiator}>
       <div className={styles.wrapperProfile}>
-        {gladiators ? (
-          gladiators
-            .slice(start, end)
-            .map((gladiator) => (
-              <CardsProfile
-                key={gladiator.id}
-                name={gladiator.name}
-                id={gladiator.id}
-                image={gladiator.picture}
-              />
-            ))
-        ) : (
-          <p>Loading</p>
-        )}
+        {listGladiator.slice(start, end).map((gladiator) => (
+          <CardsProfile
+            key={gladiator.id}
+            name={gladiator.name}
+            id={gladiator.id}
+            image={gladiator.picture}
+          />
+        ))}
       </div>
       <Pagination
         onChange={handlePagination}

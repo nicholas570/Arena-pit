@@ -1,13 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
-import Gladiators from '../Gladiators';
+import { ListGladiateur } from '../context/GladiatorPovider';
 
 import Fight from '../components/Fight';
 
 import styles from '../css/WeekFight.module.css';
 
 function WeekFights() {
-  const shuffle = (array) => array.sort(() => Math.random() - 0.5);
+  const Gladiators = useContext(ListGladiateur);
+
+  const shuffle = (array) => [...array].sort(() => Math.random() - 0.5);
 
   const shuffledArray = shuffle(Gladiators);
 
