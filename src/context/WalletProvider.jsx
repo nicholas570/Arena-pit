@@ -1,6 +1,9 @@
 import React, { useState, createContext } from 'react';
 import PropTypes from 'prop-types';
 
+if (localStorage.getItem('Token') === null) {
+  localStorage.setItem('Token', 100);
+}
 export const Wallet = createContext({
   walletToken: parseInt(localStorage.getItem('Token'), 10),
   seWallet: () => {},
