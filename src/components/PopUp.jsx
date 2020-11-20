@@ -8,12 +8,24 @@ import iconRemove from '../assets/icons/remove.svg';
 import iconAdd from '../assets/icons/add.svg';
 import styles from '../css/PopUp.module.css';
 
-const PopUp = ({ setdisplay, id }) => {
+const PopUp = ({ setdisplay, id, fighter1, fighter2 }) => {
   const listGladiateur = useContext(ListGladiateur);
   const [bet, setbet] = useState(10);
   const [token, setToken] = useState(window.localStorage.getItem('Token') - 10);
 
   const gladiator = listGladiateur.find((gladiateur) => gladiateur.id === id);
+  /*
+  const fighter1state = (fighter1.combat + fighter1.durability + fighter1.intelligence + fighter1.power + fighter1.speed +fighter1.strength)/6 
+
+  const fighter2state = (fighter2.combat + fighter2.durability + fighter2.intelligence + fighter2.power + fighter2.speed +fighter2.strength)/6  
+
+  if(fighter1state > fighter2state) {
+    return setIsWinner === true
+  } else if (fighter1state < fighter2state)
+
+  */
+  console.log(fighter1);
+  console.log(fighter2);
 
   const handleIncrement = () => {
     setToken(Math.max(token, 1) - 1);

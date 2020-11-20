@@ -13,15 +13,7 @@ function Fight({ fighter1, fighter2, fetchBet }) {
   };
   console.log(fighter1);
   console.log(fighter2);
-  /*
-  const fighter1state = (fighter1.combat + fighter1.durability + fighter1.intelligence + fighter1.power + fighter1.speed +fighter1.strength)/6 
 
-  const fighter2state = (fighter2.combat + fighter2.durability + fighter2.intelligence + fighter2.power + fighter2.speed +fighter2.strength)/6  
-
-  if(fighter1state > fighter2state) {
-    return setIsWinner === true
-  } else if (fighter1state < fighter2state)
-  */
   return (
     <div
       className={`${styles.container} ${
