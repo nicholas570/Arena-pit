@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
+import Snackbar from '@material-ui/core/Snackbar';
+import MuiAlert from '@material-ui/lab/Alert';
+
 import styles from '../css/Fight.module.css';
 import Fighter from './Fighter';
 import PopUp from './PopUp';
@@ -18,6 +21,7 @@ const averageSkill = (gladiator) => {
 };
 
 function Fight({ fighter1, fighter2 }) {
+  const [open, setOpen] = useState(false);
   const [active, setActive] = useState(true);
   const [display, setdisplay] = useState(false);
   const [gladiatorCouple, setgladiatorCouple] = useState({});
@@ -41,10 +45,27 @@ function Fight({ fighter1, fighter2 }) {
     );
   };
 
+  const handleClick = (status) => {
+    setOpen(status);
+  };
+
+  function Alert(props) {
+    // eslint-disable-next-line react/jsx-props-no-spreading
+    return <MuiAlert elevation={6} variant="filled" {...props} />;
+  }
+
+  const handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+
+    setOpen(false);
+  };
+
   return (
     <div
       className={`${styles.container} ${
-        !active ? styles.containerActive : styles.containerDisable
+        active ? styles.containerActive : styles.containerDisable
       }`}
     >
       <Fighter
@@ -67,8 +88,21 @@ function Fight({ fighter1, fighter2 }) {
           gladiator={gladiatorCouple.gladiator1}
           setdisplay={() => setdisplay(false)}
           startFight={() => startFight()}
+          handleClick={() => handleClick(true)}
         />
       )}
+      <Snackbar open={open} autoHideDuration={3000} onClose={handleClose}>
+        <Alert
+          onClose={handleClose}
+          severity={
+            gladiatorWinner === gladiatorCouple.gladiator1 ? 'success' : 'error'
+          }
+        >
+          {gladiatorWinner === gladiatorCouple.gladiator1
+            ? 'Well done! You won this game and you double your stake !'
+            : `Sorry, you lost this bet and your stake...`}
+        </Alert>
+      </Snackbar>
     </div>
   );
 }
