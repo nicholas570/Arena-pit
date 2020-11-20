@@ -33,6 +33,7 @@
   background-color: #cc9d56;
   border: none;
   font-size: 1rem;
+  z-index: 4;
 }
 
 .palme {

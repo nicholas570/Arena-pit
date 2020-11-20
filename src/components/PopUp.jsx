@@ -47,15 +47,15 @@ const PopUp = ({ setdisplay, gladiator, startFight, handleClick }) => {
   return (
     <div ref={overlayRef} className={styles.overlay}>
       <div className={styles.popup}>
+        <button
+          onClick={() => setdisplay()}
+          className={styles.close}
+          type="button"
+        >
+          <img src={iconClose} alt="icon close" />
+        </button>
         {walletToken ? (
           <>
-            <button
-              onClick={() => setdisplay()}
-              className={styles.close}
-              type="button"
-            >
-              <img src={iconClose} alt="icon close" />
-            </button>
             <div className={styles.nameFighter}>{glad.name}</div>
             <p>
               Denarius available:
