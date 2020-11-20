@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { ListGladiateur } from '../context/GladiatorPovider';
 import styles from '../css/FavoriteGladiator.module.css';
-import palme from '../assets/icons/palmeor.png';
+import palme from '../assets/icons/palmegreen.png';
 
 function FavoriteGladiator() {
   const listGladiator = useContext(ListGladiateur);
@@ -24,7 +24,7 @@ function FavoriteGladiator() {
             <img className={styles.palme} src={palme} alt="alt" />
 
             <h3 className={styles.gladiatorName}>{gladiator.name}</h3>
-            <p className={styles.gladiatorRating}>{`${randomRating} /5`}</p>
+            <p className={styles.gladiatorRating}>{`Rating : ${randomRating} /5`}</p>
           </div>
         ) : (
           ''

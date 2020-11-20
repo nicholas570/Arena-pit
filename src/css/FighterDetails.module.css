@@ -9,8 +9,9 @@
 .fighterCard {
   display: flex;
   background-color: #e2e2e2;
+  border-radius: 5px;
   width: 70vw;
-  height: 55vh;
+  height: 60vh;
   margin-left: 15vw;
   justify-content: space-around;
 }
@@ -22,7 +23,7 @@
 }
 
 .profil {
-  margin: 3em 3em 3em 0;
+  margin: 5em 3em 3em 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,8 +36,9 @@
   position: absolute;
   z-index: 1;
   border-radius: 1000px;
-  border: 0.5rem solid #cc9d56;
+  border: 0.5rem solid #c5c5c5;
 }
+
 .palme {
   max-width: 20vw;
   z-index: 3;
