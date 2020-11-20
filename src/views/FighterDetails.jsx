@@ -20,8 +20,6 @@ function FighterDetails() {
   const [gladiator, setgladiator] = useState({});
   const [isFavourite, setisFavourite] = useState(false);
 
-  const randomRating = Math.round((Math.random() * 4 + 1) * 100) / 100;
-
   const { id } = useParams();
 
   useEffect(() => {
@@ -55,7 +53,7 @@ function FighterDetails() {
           <ul className={styles.statsList}>
             <li className={styles.stats}>
               <img className={styles.abilities} src={combat} alt="combat" />
-              {`Combat : 
+              {`Combat :
               ${gladiator.combat}`}
             </li>
             <li className={styles.stats}>
@@ -64,7 +62,7 @@ function FighterDetails() {
                 src={durability}
                 alt="durability"
               />
-              {`Durability : 
+              {`Durability :
               ${gladiator.durability}`}
             </li>
             <li className={styles.stats}>
@@ -77,7 +75,7 @@ function FighterDetails() {
             </li>
             <li className={styles.stats}>
               <img className={styles.abilities} src={power} alt="power" />
-              {`Power : 
+              {`Power :
               ${gladiator.power}`}
             </li>
             <li className={styles.stats}>
@@ -87,11 +85,11 @@ function FighterDetails() {
             </li>
             <li className={styles.stats}>
               <img className={styles.abilities} src={strength} alt="strength" />
-              {`Strength : 
+              {`Strength :
               ${gladiator.strength}`}
             </li>
           </ul>
-          <p className={styles.rating}>{`Rating : ${randomRating}/5`}</p>
+          <p className={styles.rating}>{`Rating : ${gladiator.rating}/5`}</p>
         </div>
       </div>
     </div>

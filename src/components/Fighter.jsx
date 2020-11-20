@@ -6,8 +6,6 @@ import palme from '../assets/icons/palmeor.png';
 import styles from '../css/Fighter.module.css';
 
 function Fighter({ fighter, handleActive, winner }) {
-  const randomRating = Math.round((Math.random() * 4 + 1) * 100) / 100;
-
   return (
     <>
       <div
@@ -25,7 +23,7 @@ function Fighter({ fighter, handleActive, winner }) {
           src={palme}
           alt="alt"
         />
-        <div>{`${fighter.name} ${randomRating}`}</div>
+        <div>{`${fighter.name} ${fighter.rating}`}</div>
         <button
           type="button"
           className={styles.btn}
@@ -42,12 +40,13 @@ Fighter.propTypes = {
   fighter: PropTypes.shape({
     id: PropTypes.number,
     name: PropTypes.string,
-    combat: PropTypes.number,
-    durability: PropTypes.number,
-    intelligence: PropTypes.number,
-    power: PropTypes.number,
-    speed: PropTypes.number,
-    strength: PropTypes.number,
+    combat: PropTypes.string,
+    durability: PropTypes.string,
+    intelligence: PropTypes.string,
+    power: PropTypes.string,
+    speed: PropTypes.string,
+    strength: PropTypes.string,
+    rating: PropTypes.number,
     picture: PropTypes.string,
   }).isRequired,
   handleActive: PropTypes.func.isRequired,
