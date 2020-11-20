@@ -4,12 +4,11 @@ import PropTypes from 'prop-types';
 import styles from '../css/Fight.module.css';
 import Fighter from './Fighter';
 
-function Fight({ fighter1, fighter2, fetchBet }) {
+function Fight({ fighter1, fighter2, fetchBet, gladiatorWinner }) {
   const [active, setActive] = useState(true);
 
-  const handleActive = (idGladiator) => {
-    setActive(false);
-    fetchBet(idGladiator);
+  const handleActive = () => {
+    // setActive(false);
   };
 
   return (
@@ -20,12 +19,18 @@ function Fight({ fighter1, fighter2, fetchBet }) {
     >
       <Fighter
         fighter={fighter1}
-        handleActive={(idGladiator) => handleActive(idGladiator)}
+        handleActive={(idGladiator, idGladiator2 = fighter2) => {
+          fetchBet(idGladiator, idGladiator2);
+        }}
+        winner={gladiatorWinner.id === fighter1.id}
       />
       <div className={styles.versus}>VS</div>
       <Fighter
         fighter={fighter2}
-        handleActive={(idGladiator) => handleActive(idGladiator)}
+        handleActive={(idGladiator, idGladiator2 = fighter1) => {
+          fetchBet(idGladiator, idGladiator2);
+        }}
+        winner={gladiatorWinner.id === fighter2.id}
       />
     </div>
   );
@@ -35,25 +40,27 @@ Fight.propTypes = {
   fighter1: PropTypes.shape({
     id: PropTypes.number,
     name: PropTypes.string,
-    combat: PropTypes.string,
-    durability: PropTypes.string,
-    intelligence: PropTypes.string,
-    power: PropTypes.string,
-    speed: PropTypes.string,
-    strength: PropTypes.string,
+    combat: PropTypes.number,
+    durability: PropTypes.number,
+    intelligence: PropTypes.number,
+    power: PropTypes.number,
+    speed: PropTypes.number,
+    strength: PropTypes.number,
     picture: PropTypes.string,
   }).isRequired,
   fighter2: PropTypes.shape({
     id: PropTypes.number,
     name: PropTypes.string,
-    combat: PropTypes.string,
-    durability: PropTypes.string,
-    intelligence: PropTypes.string,
-    power: PropTypes.string,
-    speed: PropTypes.string,
-    strength: PropTypes.string,
+    combat: PropTypes.number,
+    durability: PropTypes.number,
+    intelligence: PropTypes.number,
+    power: PropTypes.number,
+    speed: PropTypes.number,
+    strength: PropTypes.number,
     picture: PropTypes.string,
   }).isRequired,
   fetchBet: PropTypes.func.isRequired,
+  // eslint-disable-next-line react/forbid-prop-types
+  gladiatorWinner: PropTypes.object.isRequired,
 };
 export default Fight;
