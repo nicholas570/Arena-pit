@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import PropTypes from 'prop-types';
 
 import Snackbar from '@material-ui/core/Snackbar';
@@ -7,6 +7,7 @@ import MuiAlert from '@material-ui/lab/Alert';
 import styles from '../css/Fight.module.css';
 import Fighter from './Fighter';
 import PopUp from './PopUp';
+import { Wallet } from '../context/WalletProvider';
 
 const averageSkill = (gladiator) => {
   const {
@@ -27,6 +28,7 @@ function Fight({ fighter1, fighter2 }) {
   const [display, setdisplay] = useState(false);
   const [gladiatorCouple, setgladiatorCouple] = useState({});
   const [gladiatorWinner, setGladiatorWinner] = useState({});
+  const { seWallet } = useContext(Wallet);
 
   const fetchBet = (idGladiator, idGladiator2) => {
     setdisplay(true);
@@ -34,12 +36,15 @@ function Fight({ fighter1, fighter2 }) {
     setgladiatorCouple({ gladiator1: idGladiator, gladiator2: idGladiator2 });
   };
 
-  const startFight = () => {
+  const startFight = (token) => {
     const { gladiator1, gladiator2 } = gladiatorCouple;
 
     const averageGladiator1 = averageSkill(gladiator1);
     const averageGladiator2 = averageSkill(gladiator2);
 
+    const wallet = parseInt(localStorage.getItem('Token'), 10);
+
+    seWallet(wallet - token);
     setdisplay(false);
     setActive(false);
     setGladiatorWinner(
@@ -94,7 +99,7 @@ function Fight({ fighter1, fighter2 }) {
         <PopUp
           gladiator={gladiatorCouple.gladiator1}
           setdisplay={() => setdisplay(false)}
-          startFight={() => startFight()}
+          startFight={(token) => startFight(token)}
           handleClick={() => handleClick(true)}
         />
       )}
