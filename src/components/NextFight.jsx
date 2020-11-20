@@ -19,7 +19,9 @@ function NextFight() {
       <h2 className={styles.bannerNextFight}>Next fight</h2>
       {Gladiators.map((gladiator) =>
         firstGladiatorId === gladiator.id ? (
-          <div className={styles.fighter}>{gladiator.name}</div>
+          <div key={gladiator.id} className={styles.fighter}>
+            {gladiator.name}
+          </div>
         ) : (
           ''
         )
@@ -28,7 +30,9 @@ function NextFight() {
       <div className={styles.versus}>VS</div>
       {Gladiators.map((gladiator) =>
         secondGladiatorId === gladiator.id ? (
-          <div className={styles.fighter}>{gladiator.name}</div>
+          <div key={gladiator.id} className={styles.fighter}>
+            {gladiator.name}
+          </div>
         ) : (
           ''
         )
