@@ -8,8 +8,6 @@ import styles from '../css/Fighter.module.css';
 function Fighter({ fighter, handleActive }) {
   const [isWinner, setIsWinner] = useState(false);
 
-  const randomRating = Math.round((Math.random() * 4 + 1) * 100) / 100;
-
   return (
     <>
       <div
@@ -27,7 +25,7 @@ function Fighter({ fighter, handleActive }) {
           src={palme}
           alt="alt"
         />
-        <div>{`${fighter.name} ${randomRating}`}</div>
+        <div>{`${fighter.name} ${fighter.rating}`}</div>
         <button
           type="button"
           className={styles.btn}
@@ -50,6 +48,7 @@ Fighter.propTypes = {
     power: PropTypes.string,
     speed: PropTypes.string,
     strength: PropTypes.string,
+    rating: PropTypes.number,
     picture: PropTypes.string,
   }).isRequired,
   handleActive: PropTypes.func.isRequired,

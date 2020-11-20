@@ -6,7 +6,6 @@ import palme from '../assets/icons/palmegreen.png';
 function FavoriteGladiator() {
   const listGladiator = useContext(ListGladiateur);
   const randomId = Math.floor(Math.random() * 13) + 1;
-  const randomRating = Math.round((Math.random() * 4 + 1) * 100) / 100;
 
   return (
     <div>
@@ -24,7 +23,9 @@ function FavoriteGladiator() {
             <img className={styles.palme} src={palme} alt="alt" />
 
             <h3 className={styles.gladiatorName}>{gladiator.name}</h3>
-            <p className={styles.gladiatorRating}>{`Rating : ${randomRating} /5`}</p>
+            <p className={styles.gladiatorRating}>
+              {`Rating : ${gladiator.rating} /5`}
+            </p>
           </div>
         ) : (
           ''
