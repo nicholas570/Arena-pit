@@ -6,11 +6,11 @@
   width: 80vw;
   max-width: 50rem;
   height: 10vh;
-  background-color: #E2E2E2;
+  background-color: #e2e2e2;
   color: #212121;
   transform: skew(-18deg);
   position: relative;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 .bannerNextFight {
@@ -19,7 +19,7 @@
   left: -3rem;
   text-transform: uppercase;
   color: #fff;
-  background-color: #CC9D56;
+  background-color: #cc9d56;
   padding: 1rem;
   transform: skew(-5deg);
   max-width: 18rem;
