@@ -90,7 +90,9 @@ const PopUp = ({ setdisplay, gladiator, startFight, handleClick }) => {
             </button>
           </>
         ) : (
-          'No more denarius avalaible'
+          <div className={styles.messageNotAvailable}>
+            No more denarius avalaible
+          </div>
         )}
       </div>
     </div>
