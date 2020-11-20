@@ -8,13 +8,15 @@ import iconRemove from '../assets/icons/remove.svg';
 import iconAdd from '../assets/icons/add.svg';
 import styles from '../css/PopUp.module.css';
 
-const PopUp = ({ setdisplay, id }) => {
+const PopUp = ({ setdisplay, gladiator, startFight }) => {
   const overlayRef = createRef(null);
   const listGladiateur = useContext(ListGladiateur);
   const [bet, setbet] = useState(10);
   const [token, setToken] = useState(window.localStorage.getItem('Token') - 10);
 
-  const gladiator = listGladiateur.find((gladiateur) => gladiateur.id === id);
+  const glad = listGladiateur.find(
+    (gladiateur) => gladiateur.id === gladiator.id
+  );
 
   useEffect(() => {
     overlayRef.current.style.top = `${window.scrollY}px`;
@@ -50,7 +52,7 @@ const PopUp = ({ setdisplay, id }) => {
         >
           <img src={iconClose} alt="icon close" />
         </button>
-        <div className={styles.nameFighter}>{gladiator.name}</div>
+        <div className={styles.nameFighter}>{glad.name}</div>
         <p>
           Denarius available:
           {token}
@@ -72,7 +74,11 @@ const PopUp = ({ setdisplay, id }) => {
             <img src={iconAdd} alt="icon add" />
           </button>
         </div>
-        <button className={styles.betButton} type="button">
+        <button
+          onClick={() => startFight()}
+          className={styles.betButton}
+          type="button"
+        >
           To bet!
         </button>
       </div>
@@ -84,5 +90,6 @@ export default PopUp;
 
 PopUp.propTypes = {
   setdisplay: PropTypes.func.isRequired,
-  id: PropTypes.number.isRequired,
+  gladiator: PropTypes.arrayOf(PropTypes.object).isRequired,
+  startFight: PropTypes.func.isRequired,
 };
