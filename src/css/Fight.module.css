@@ -1,0 +1,37 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 60vw;
+  height: 30vh;
+  background-color: #323232;
+  color: white;
+  margin: 1em;
+  opacity: 1;
+  border: none;
+}
+
+.containerActive {
+  background-color: #ffff;
+  color: #323232;
+  margin: 1em;
+}
+
+.containerWin {
+  background-color: #339941;
+  color: white;
+  margin: 1em;
+}
+
+.containerLost {
+  background-color: #c53636;
+  color: white;
+  margin: 1em;
+}
+
+.versus {
+  font-size: 5rem;
+  font-weight: bold;
+  transform: skew(-18deg);
+}

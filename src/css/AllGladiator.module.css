@@ -1,0 +1,19 @@
+.allGladiator {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 40.5rem;
+  max-height: 30rem;
+  height: 50vh;
+}
+
+.wrapperProfile {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+}
+.pagination {
+  position: relative;
+  right: 18em;
+  margin-bottom: 0.5rem;
+}

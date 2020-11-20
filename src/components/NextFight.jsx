@@ -1,13 +1,52 @@
-import React from 'react';
+import React, { useContext } from 'react';
+
+import { ListGladiateur } from '../context/GladiatorPovider';
 
 import styles from '../css/NextFight.module.css';
 
 function NextFight() {
+  const Gladiators = useContext(ListGladiateur);
+
+  const firstGladiatorId = Math.floor(Math.random() * 13) + 1;
+  let secondGladiatorId = Math.floor(Math.random() * 13) + 1;
+
+  if (secondGladiatorId === firstGladiatorId) {
+    secondGladiatorId = Math.floor(Math.random() * 13) + 1;
+  }
+
   return (
     <div className={styles.container}>
-      <div>fighter 1</div>
-      <div>VS</div>
-      <div>fighter 2</div>
+      <h2 className={styles.bannerNextFight}>Next fight</h2>
+      {Gladiators.map((gladiator) =>
+        firstGladiatorId === gladiator.id ? (
+          <div key={gladiator.id} className={styles.fighter}>
+            {gladiator.name}
+            <img
+              className={styles.picture}
+              src={gladiator.picture}
+              alt={gladiator.name}
+            />
+          </div>
+        ) : (
+          ''
+        )
+      )}
+
+      <div className={styles.versus}>VS</div>
+      {Gladiators.map((gladiator) =>
+        secondGladiatorId === gladiator.id ? (
+          <div key={gladiator.id} className={styles.fighter}>
+            {gladiator.name}
+            <img
+              className={styles.picture}
+              src={gladiator.picture}
+              alt={gladiator.name}
+            />
+          </div>
+        ) : (
+          ''
+        )
+      )}
     </div>
   );
 }

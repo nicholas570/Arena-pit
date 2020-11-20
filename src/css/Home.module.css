@@ -3,20 +3,57 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 78vh;
+  height: 100%;
 }
 
-.wrapperProfile {
+.homeBanner {
+  height: 40vh;
+  width: 100vw;
+  background-image: url('https://images.unsplash.com/photo-1562095817-0250a9683aa0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80');
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  margin-bottom: 6rem;
+}
+
+.layerBanner {
+  background-color: rgba(0, 0, 0, 0.219);
+  height: 100%;
+}
+
+.homeBanner > h1 {
+  position: absolute;
+  top: 33%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3.5rem;
+  color: white;
+  font-style: italic;
+}
+
+.homeBanner > p {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  color: white;
+  font-style: italic;
+}
+
+.wrapperFighters {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
-  max-width: 45rem;
-  max-height: 30rem;
+  margin-bottom: 8rem;
+  align-items: center;
 }
 
 .wrapperProfileTitle {
   text-transform: uppercase;
   color: #fff;
-  background-color: #df2e2f;
+  background-color: #cc9d56;
   padding: 1rem;
   transform: skew(-18deg);
+  max-width: 18rem;
 }

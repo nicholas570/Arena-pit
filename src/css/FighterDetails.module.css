@@ -1,0 +1,104 @@
+.fighterDetails {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Open Sans', sans-serif;
+  height: 78vh;
+  justify-content: center;
+}
+
+.fighterCard {
+  display: flex;
+  background-color: #e2e2e2;
+  border-radius: 5px;
+  width: 70vw;
+  height: 30rem;
+  margin-left: 15vw;
+  justify-content: space-around;
+}
+
+.favourite {
+  cursor: pointer;
+  height: 45px;
+  margin-top: 1em;
+}
+
+.profil {
+  margin: 7em 3em 3em 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: auto;
+}
+
+.imageFighter {
+  max-width: 14vw;
+  position: absolute;
+  z-index: 1;
+  border-radius: 1000px;
+  border: 0.5rem solid #c5c5c5;
+}
+
+.palme {
+  max-width: 20vw;
+  z-index: 3;
+  transform: translateY(-1.7rem);
+}
+.name {
+  background-color: #323232;
+  color: #e2e2e2;
+  padding: 1rem;
+  margin-top: 0;
+  width: 10vw;
+  transform: translateY(-3.4em) skew(-18deg);
+  z-index: 4;
+  position: relative;
+}
+
+.infos {
+  margin: 3em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+  background-color: #323232;
+  color: #e2e2e2;
+  width: 30vw;
+  height: 95%;
+  border-radius: 5px;
+}
+.statsList {
+  text-align: justify;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.rating {
+  background-color: #cc9d56;
+  color: #e2e2e2;
+  width: 10vw;
+  transform: skew(-18deg);
+  font-weight: bold;
+  padding: 1rem;
+}
+
+.stats {
+  margin: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0;
+  background-color: #e2e2e2;
+  color: #323232;
+  padding: 1em;
+  border-radius: 200px;
+}
+.statsTitle {
+  margin-bottom: 0;
+}
+
+.abilities {
+  border-radius: 100px;
+  margin-right: 0.5rem;
+}

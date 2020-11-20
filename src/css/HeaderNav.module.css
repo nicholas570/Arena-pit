@@ -3,9 +3,11 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  width: 30vw;
+  width: 38vw;
   font-size: 1rem;
   list-style-type: none;
+  font-style: italic;
+  font-weight: bold;
 }
 
 .item {
@@ -17,4 +19,18 @@
   text-decoration: none;
   color: black;
   transition: color 0.3s linear;
+}
+
+.denarius {
+  background-color: #212121;
+  border-radius: 5px;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconDenarius {
+  width: 24px;
+  margin-right: 0.5rem;
 }

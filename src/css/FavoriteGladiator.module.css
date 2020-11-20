@@ -1,0 +1,53 @@
+.favCard {
+  background-color: #cc9d56;
+  border-radius: 5px;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-style: italic;
+  height: 28rem;
+  width: 25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 6rem;
+  margin-left: 5rem;
+}
+
+.favTitleBloc {
+  margin-top: 1rem;
+  padding: 0 1rem;
+  background: #323232;
+  transform: skew(-30deg);
+}
+
+.favTitle {
+  transform: skew(30deg);
+  font-size: 1.3rem;
+  margin: 0.8rem;
+}
+.gladiatorPicture {
+  margin: 1.8rem 0;
+  height: 13rem;
+  border-radius: 5px;
+  border-radius: 100%;
+}
+.palme {
+  max-width: 17em;
+  z-index: 3;
+  transform: translateY(-16rem);
+  margin-bottom: 1.2rem;
+}
+.gladiatorName {
+  font-size: 1.9rem;
+  font-weight: 700;
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+  transform: translateY(-18.3rem);
+}
+
+.gladiatorRating {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0.5rem;
+  transform: translateY(-18.3rem);
+}

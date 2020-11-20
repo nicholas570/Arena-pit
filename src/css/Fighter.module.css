@@ -1,0 +1,47 @@
+.wrapperFighter {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+}
+
+.wrapperFighterWinner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+  transform: translateY(-5rem);
+}
+
+.fighter {
+  border-radius: 13rem;
+  height: 150px;
+}
+
+.fighterWinner {
+  border-radius: 13rem;
+  height: 150px;
+  transform: translateY(10rem);
+}
+
+.btn {
+  height: 2em;
+  width: 7em;
+  transform: skew(-18deg);
+  background-color: #cc9d56;
+  border: none;
+  font-size: 1rem;
+  z-index: 4;
+}
+
+.palme {
+  max-width: 11em;
+  z-index: 3;
+  transform: translateY(0rem);
+}
+
+.loser {
+  display: none;
+}

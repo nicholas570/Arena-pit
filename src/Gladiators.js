@@ -8,6 +8,9 @@ const GLADIATORS = [
     power: '5',
     speed: '13',
     strength: '8',
+    rating: 2.32,
+    picture:
+      'https://images.generated.photos/6KpVj3nsfLMVtJGjDTmFjZyFeEW-YCqghHtHvrUVuQ0/rs:fit:512:512/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzA1MTQxNDAuanBn.jpg',
   },
   {
     id: 2,
@@ -18,6 +21,9 @@ const GLADIATORS = [
     power: '72',
     speed: '38',
     strength: '28',
+    rating: 1.5,
+    picture:
+      'https://images.generated.photos/l0t79tvzU440EWi0EZWOZwPILjwoYr_RcbXPG4cStac/rs:fit:512:512/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzAyODIwOTQuanBn.jpg',
   },
   {
     id: 3,
@@ -28,6 +34,9 @@ const GLADIATORS = [
     power: '62',
     speed: '53',
     strength: '80',
+    rating: 3.48,
+    picture:
+      'https://images.generated.photos/0Q6UqyfnMJpEXD_3qB_oxsQLdmVZFgBGC6pEX0kwjxo/rs:fit:512:512/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzA4OTIyOTkuanBn.jpg',
   },
   {
     id: 4,
@@ -38,6 +47,9 @@ const GLADIATORS = [
     power: '24',
     speed: '17',
     strength: '100',
+    rating: 3.48,
+    picture:
+      'https://images.generated.photos/cWZzhcR4JnA3L6_5sRdydVd04-WcyInQnCsJkUJM-6E/rs:fit:512:512/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzAxNzc3NDEuanBn.jpg',
   },
   {
     id: 5,
@@ -48,6 +60,9 @@ const GLADIATORS = [
     power: '98',
     speed: '25',
     strength: '80',
+    rating: 2.33,
+    picture:
+      'https://images.generated.photos/f63is4BnHxyt8niiAo2FbOIOaIKOFOd1ODDL06Ma4yk/rs:fit:512:512/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzAwNTQ4MzIuanBn.jpg',
   },
   {
     id: 6,
@@ -58,6 +73,9 @@ const GLADIATORS = [
     power: '72',
     speed: '38',
     strength: '28',
+    rating: 3.25,
+    picture:
+      'https://images.generated.photos/Qllj3GfpnuAfqoU4Tj250VGqaLEIRi6tX1eSOu3AUzQ/rs:fit:512:512/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzAyNzk2NDEuanBn.jpg',
   },
   {
     id: 7,
@@ -68,6 +86,9 @@ const GLADIATORS = [
     power: '37',
     speed: '33',
     strength: '10',
+    rating: 2.32,
+    picture:
+      'https://images.generated.photos/sgDbjLwQ6y6gA3wZIxCvmdPERa8Tyb8TVGjjyz9HLCg/rs:fit:512:512/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzA4MzM2MzguanBn.jpg',
   },
   {
     id: 8,
@@ -78,6 +99,9 @@ const GLADIATORS = [
     power: '100',
     speed: '83',
     strength: '63',
+    rating: 2.73,
+    picture:
+      'https://images.generated.photos/Vzm2YM1ueEOvZQfwTPRjn5Sr5vh65kLiodikEKY-DzY/rs:fit:512:512/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzAzNjY1MTguanBn.jpg',
   },
   {
     id: 9,
@@ -88,6 +112,9 @@ const GLADIATORS = [
     power: '99',
     speed: '53',
     strength: '90',
+    rating: 2.91,
+    picture:
+      'https://images.generated.photos/50_hkIHU2uVChGAETA9CJBJZUW-Z3xGPUbQH_4ln4fQ/rs:fit:512:512/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzAzNjgyMjEuanBn.jpg',
   },
   {
     id: 10,
@@ -98,16 +125,23 @@ const GLADIATORS = [
     power: '100',
     speed: '12',
     strength: '10',
+    rating: 2.91,
+
+    picture:
+      'https://images.generated.photos/YAYrNUtG0uRtPvn68DDeJNboOZcKMVV9I5IWP3XoMsQ/rs:fit:512:512/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzA5NTExOTQuanBn.jpg',
   },
   {
     id: 11,
-    name: 'Florius',
+    name: 'Florius Brutus',
     combat: '85',
     durability: '65',
     intelligence: '88',
     power: '100',
     speed: '35',
     strength: '28',
+    rating: 3.74,
+    picture:
+      'https://images.generated.photos/6Hqx26aDCk9XqvpNQ8ddxCumNDrUMDLAcrYwDTUeYUU/rs:fit:512:512/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzA4ODY5NzcuanBn.jpg',
   },
   {
     id: 12,
@@ -118,6 +152,9 @@ const GLADIATORS = [
     power: '100',
     speed: '100',
     strength: '85',
+    rating: 3.48,
+    picture:
+      'https://images.generated.photos/YjWrFfAqupXAoOnWcMgWue3SECMYHWpR4ZXPLSreynk/rs:fit:512:512/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzA1MjE1NjAuanBn.jpg',
   },
   {
     id: 13,
@@ -128,6 +165,22 @@ const GLADIATORS = [
     power: '95',
     speed: '100',
     strength: '85',
+    rating: 3.15,
+    picture:
+      'https://images.generated.photos/hGlMBrFuLHygXuC-Klj7WjbnNporvUbbNKrG_8X5F7s/rs:fit:512:512/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzAwNzU4MjguanBn.jpg',
+  },
+  {
+    id: 14,
+    name: 'Nicolus Maximus',
+    combat: '70',
+    durability: '80',
+    intelligence: '90',
+    power: '85',
+    speed: '90',
+    strength: '100',
+    rating: 3.82,
+    picture:
+      'https://images.generated.photos/5JKQxPv4i-qyurCFkTmv9noGGwRHGAJErGv9mU7VE1k/rs:fit:512:512/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzA3MzE4NzIuanBn.jpg',
   },
 ];
 
