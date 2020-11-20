@@ -28,7 +28,7 @@ function Fight({ fighter1, fighter2 }) {
   const [display, setdisplay] = useState(false);
   const [gladiatorCouple, setgladiatorCouple] = useState({});
   const [gladiatorWinner, setGladiatorWinner] = useState({});
-  const { seWallet } = useContext(Wallet);
+  const { seWallet, walletToken } = useContext(Wallet);
 
   const fetchBet = (idGladiator, idGladiator2) => {
     setdisplay(true);
@@ -42,13 +42,16 @@ function Fight({ fighter1, fighter2 }) {
     const averageGladiator1 = averageSkill(gladiator1);
     const averageGladiator2 = averageSkill(gladiator2);
 
-    const wallet = parseInt(localStorage.getItem('Token'), 10);
-
-    seWallet(Math.max(wallet - token, 0));
     setdisplay(false);
     setActive(false);
-    setGladiatorWinner(
-      averageGladiator1 > averageGladiator2 ? gladiator1 : gladiator2
+    const winner =
+      averageGladiator1 > averageGladiator2 ? gladiator1 : gladiator2;
+    setGladiatorWinner(winner);
+
+    seWallet(
+      winner === gladiator1
+        ? walletToken + token * 2
+        : Math.max(walletToken - token, 0)
     );
   };
 
