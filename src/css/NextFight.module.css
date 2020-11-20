@@ -34,3 +34,9 @@
   font-size: 1.8rem;
   font-weight: bold;
 }
+
+.picture {
+  max-width: 4.5vw;
+  transform: skew(17deg);
+  border-radius: 100px;
+}

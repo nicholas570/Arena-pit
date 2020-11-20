@@ -5,8 +5,7 @@ import denariusIcon from '../assets/icons/coins.svg';
 import styles from '../css/HeaderNav.module.css';
 
 function HeaderNav() {
-  const token = JSON.parse(window.localStorage.getItem('Token'));
-
+  const token = parseInt(localStorage.getItem('Token'), 10);
   return (
     <ul className={styles.container}>
       <Link to="/" className={styles.item}>

@@ -76,7 +76,7 @@ const PopUp = ({ setdisplay, gladiator, startFight, handleClick }) => {
         </div>
         <button
           onClick={() => {
-            startFight();
+            startFight(bet);
             handleClick(true);
           }}
           className={styles.betButton}

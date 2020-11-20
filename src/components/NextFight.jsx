@@ -21,6 +21,11 @@ function NextFight() {
         firstGladiatorId === gladiator.id ? (
           <div key={gladiator.id} className={styles.fighter}>
             {gladiator.name}
+            <img
+              className={styles.picture}
+              src={gladiator.picture}
+              alt={gladiator.name}
+            />
           </div>
         ) : (
           ''
@@ -32,6 +37,11 @@ function NextFight() {
         secondGladiatorId === gladiator.id ? (
           <div key={gladiator.id} className={styles.fighter}>
             {gladiator.name}
+            <img
+              className={styles.picture}
+              src={gladiator.picture}
+              alt={gladiator.name}
+            />
           </div>
         ) : (
           ''
