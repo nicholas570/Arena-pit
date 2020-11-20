@@ -6,6 +6,7 @@ import Fight from '../components/Fight';
 import PopUp from '../components/PopUp';
 
 import styles from '../css/WeekFight.module.css';
+<<<<<<< HEAD
 
 const averageSkill = (gladiator) => {
   const {
@@ -18,15 +19,15 @@ const averageSkill = (gladiator) => {
   } = gladiator;
   return (combat + durability + intelligence + power + speed + strength) / 6;
 };
+=======
+>>>>>>> bac90d3691fd8303a69042c3e0244c09671220c3
 
 function WeekFights() {
   const Gladiators = useContext(ListGladiateur);
-  const [display, setdisplay] = useState(false);
-  const [gladiatorWinner, setGladiatorWinner] = useState({});
   const [gladiator, setgladiator] = useState({
     firstGlad: [],
   });
-  const [gladiatorCouple, setgladiatorCouple] = useState({});
+  const [hasTriggered, setHasTriggered] = useState(false);
 
   const shuffle = (array) => [...array].sort(() => Math.random() - 0.5);
 
@@ -41,6 +42,7 @@ function WeekFights() {
     });
   }, []);
 
+<<<<<<< HEAD
   const fetchBet = (idGladiator, idGladiator2) => {
     setdisplay(true);
     setgladiatorCouple({ gladiator1: idGladiator, gladiator2: idGladiator2 });
@@ -62,19 +64,19 @@ function WeekFights() {
     );
   };
 
+=======
+>>>>>>> bac90d3691fd8303a69042c3e0244c09671220c3
   return (
     <div className={styles.container}>
       {gladiator.firstGlad.map((glad, i) => (
         <Fight
-          fetchBet={(idGladiator, idGladiator2) => {
-            fetchBet(idGladiator, idGladiator2);
-          }}
           key={glad.id}
           fighter1={glad}
           fighter2={gladiator.secondGlad[i]}
-          gladiatorWinner={gladiatorWinner}
+          hasTriggered={hasTriggered}
         />
       ))}
+<<<<<<< HEAD
       {display && (
         <PopUp
           gladiator={gladiatorCouple.gladiator1}
@@ -82,6 +84,8 @@ function WeekFights() {
           startFight={(token) => startFight(token)}
         />
       )}
+=======
+>>>>>>> bac90d3691fd8303a69042c3e0244c09671220c3
     </div>
   );
 }
