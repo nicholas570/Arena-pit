@@ -38,7 +38,7 @@
   margin-bottom: 1.2rem;
 }
 .gladiatorName {
-  font-size: 1.8rem;
+  font-size: 1.9rem;
   font-weight: 700;
   margin-top: 1.5rem;
   margin-bottom: 0;
@@ -46,8 +46,8 @@
 }
 
 .gladiatorRating {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 700;
-  margin: 0.8rem;
+  margin: 0.5rem;
   transform: translateY(-18.3rem);
 }
