@@ -11,8 +11,6 @@ function Fight({ fighter1, fighter2, fetchBet }) {
     setActive(false);
     fetchBet(idGladiator);
   };
-  console.log(fighter1);
-  console.log(fighter2);
 
   return (
     <div

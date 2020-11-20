@@ -14,16 +14,23 @@ const PopUp = ({ setdisplay, id, fighter1, fighter2 }) => {
   const [token, setToken] = useState(window.localStorage.getItem('Token') - 10);
 
   const gladiator = listGladiateur.find((gladiateur) => gladiateur.id === id);
+
   /*
-  const fighter1state = (fighter1.combat + fighter1.durability + fighter1.intelligence + fighter1.power + fighter1.speed +fighter1.strength)/6 
+  const fighter1stats = (fighter1.combat + fighter1.durability + fighter1.intelligence + fighter1.power + fighter1.speed +fighter1.strength)/6 
 
-  const fighter2state = (fighter2.combat + fighter2.durability + fighter2.intelligence + fighter2.power + fighter2.speed +fighter2.strength)/6  
+  const fighter2stats = (fighter2.combat + fighter2.durability + fighter2.intelligence + fighter2.power + fighter2.speed +fighter2.strength)/6  
 
-  if(fighter1state > fighter2state) {
-    return setIsWinner === true
-  } else if (fighter1state < fighter2state)
+  if(fighter1stats > fighter2stats) {
+    return etat fighter1 === true
+  } else if (fighter1stats < fighter2stats) {
+    return etat fighter2 === true
+  } else {
+    return fighter1 et fighter 2 === true
+  }
 
+  
   */
+
   console.log(fighter1);
   console.log(fighter2);
 
