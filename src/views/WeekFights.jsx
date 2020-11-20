@@ -1,5 +1,8 @@
 import React, { useState, useContext, useEffect } from 'react';
 
+import Snackbar from '@material-ui/core/Snackbar';
+import MuiAlert from '@material-ui/lab/Alert';
+
 import { ListGladiateur } from '../context/GladiatorPovider';
 
 import Fight from '../components/Fight';
@@ -20,6 +23,7 @@ const averageSkill = (gladiator) => {
 };
 
 function WeekFights() {
+  const [open, setOpen] = useState(false);
   const Gladiators = useContext(ListGladiateur);
   const [display, setdisplay] = useState(false);
   const [gladiatorWinner, setGladiatorWinner] = useState({});
@@ -58,6 +62,23 @@ function WeekFights() {
     );
   };
 
+  const handleClick = (status) => {
+    setOpen(status);
+  };
+
+  function Alert(props) {
+    // eslint-disable-next-line react/jsx-props-no-spreading
+    return <MuiAlert elevation={6} variant="filled" {...props} />;
+  }
+
+  const handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+
+    setOpen(false);
+  };
+
   return (
     <div className={styles.container}>
       {gladiator.firstGlad.map((glad, i) => (
@@ -76,8 +97,21 @@ function WeekFights() {
           gladiator={gladiatorCouple.gladiator1}
           setdisplay={() => setdisplay(false)}
           startFight={() => startFight()}
+          handleClick={() => handleClick(true)}
         />
       )}
+      <Snackbar open={open} autoHideDuration={3000} onClose={handleClose}>
+        <Alert
+          onClose={handleClose}
+          severity={
+            gladiatorWinner === gladiatorCouple.gladiator1 ? 'success' : 'error'
+          }
+        >
+          {gladiatorWinner === gladiatorCouple.gladiator1
+            ? 'Well done! You won this game and you double your stake !'
+            : `Sorry, you lost this bet and your stake...`}
+        </Alert>
+      </Snackbar>
     </div>
   );
 }

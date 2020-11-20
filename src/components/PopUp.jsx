@@ -8,7 +8,7 @@ import iconRemove from '../assets/icons/remove.svg';
 import iconAdd from '../assets/icons/add.svg';
 import styles from '../css/PopUp.module.css';
 
-const PopUp = ({ setdisplay, gladiator, startFight }) => {
+const PopUp = ({ setdisplay, gladiator, startFight, handleClick }) => {
   const overlayRef = createRef(null);
   const listGladiateur = useContext(ListGladiateur);
   const [bet, setbet] = useState(10);
@@ -75,7 +75,10 @@ const PopUp = ({ setdisplay, gladiator, startFight }) => {
           </button>
         </div>
         <button
-          onClick={() => startFight()}
+          onClick={() => {
+            startFight();
+            handleClick(true);
+          }}
           className={styles.betButton}
           type="button"
         >
@@ -92,4 +95,5 @@ PopUp.propTypes = {
   setdisplay: PropTypes.func.isRequired,
   gladiator: PropTypes.arrayOf(PropTypes.object).isRequired,
   startFight: PropTypes.func.isRequired,
+  handleClick: PropTypes.func.isRequired,
 };
