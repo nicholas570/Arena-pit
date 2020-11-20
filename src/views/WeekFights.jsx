@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 
 import { ListGladiateur } from '../context/GladiatorPovider';
 
@@ -10,17 +10,23 @@ import PopUp from '../components/PopUp';
 function WeekFights() {
   const Gladiators = useContext(ListGladiateur);
   const [display, setdisplay] = useState(false);
+  const [gladiator, setgladiator] = useState({
+    firstGlad: [],
+  });
   const [id, setid] = useState(0);
 
   const shuffle = (array) => [...array].sort(() => Math.random() - 0.5);
 
-  const shuffledArray = shuffle(Gladiators);
+  useEffect(() => {
+    const shuffledArray = shuffle(Gladiators);
 
-  const half = Math.ceil(Gladiators.length / 2);
+    const half = Math.ceil(Gladiators.length / 2);
 
-  const firstGlad = shuffledArray.splice(0, half);
-
-  const secondGlad = shuffledArray.splice(-half);
+    setgladiator({
+      firstGlad: shuffledArray.splice(0, half),
+      secondGlad: shuffledArray.splice(-half),
+    });
+  }, []);
 
   const fetchBet = (idGladiator) => {
     setdisplay(true);
@@ -29,12 +35,12 @@ function WeekFights() {
 
   return (
     <div className={styles.container}>
-      {firstGlad.map((glad, i) => (
+      {gladiator.firstGlad.map((glad, i) => (
         <Fight
           fetchBet={(idGladiator) => fetchBet(idGladiator)}
           key={glad.id}
           fighter1={glad}
-          fighter2={secondGlad[i]}
+          fighter2={gladiator.secondGlad[i]}
         />
       ))}
       {display && <PopUp id={id} setdisplay={() => setdisplay(false)} />}
