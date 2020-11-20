@@ -44,7 +44,7 @@ function Fight({ fighter1, fighter2 }) {
 
     const wallet = parseInt(localStorage.getItem('Token'), 10);
 
-    seWallet(wallet - token);
+    seWallet(Math.max(wallet - token, 0));
     setdisplay(false);
     setActive(false);
     setGladiatorWinner(
