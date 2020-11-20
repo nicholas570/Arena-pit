@@ -8,9 +8,12 @@
   background-color: #323232;
   color: white;
   margin: 1em;
+  opacity: 1;
+  border: none;
 }
 
 .container:hover {
+  opacity: 0.8;
   transition: all 500ms;
 }
 
