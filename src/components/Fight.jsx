@@ -24,6 +24,7 @@ const averageSkill = (gladiator) => {
 function Fight({ fighter1, fighter2 }) {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState(true);
+
   const [display, setdisplay] = useState(false);
   const [gladiatorCouple, setgladiatorCouple] = useState({});
   const [gladiatorWinner, setGladiatorWinner] = useState({});
@@ -31,6 +32,7 @@ function Fight({ fighter1, fighter2 }) {
 
   const fetchBet = (idGladiator, idGladiator2) => {
     setdisplay(true);
+
     setgladiatorCouple({ gladiator1: idGladiator, gladiator2: idGladiator2 });
   };
 

@@ -8,6 +8,8 @@
   background-color: #323232;
   color: white;
   margin: 1em;
+  opacity: 1;
+  border: none;
 }
 
 .containerActive {
