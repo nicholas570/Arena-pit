@@ -32,6 +32,7 @@ function NextFight() {
         secondGladiatorId === gladiator.id ? (
           <div key={gladiator.id} className={styles.fighter}>
             {gladiator.name}
+            <img src={gladiator.picture} alt={gladiator.name} />
           </div>
         ) : (
           ''
