@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { Wallet } from '../context/WalletProvider';
 import denariusIcon from '../assets/icons/coins.svg';
 
 import styles from '../css/HeaderNav.module.css';
 
 function HeaderNav() {
-  const token = JSON.parse(window.localStorage.getItem('Token'));
+  const { walletToken } = useContext(Wallet);
 
   return (
     <ul className={styles.container}>
@@ -24,7 +25,7 @@ function HeaderNav() {
           src={denariusIcon}
           alt="denarius icon"
         />
-        <p>{`${token} denarius`}</p>
+        <p>{`${walletToken} denarius`}</p>
       </li>
     </ul>
   );
