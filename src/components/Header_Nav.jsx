@@ -7,7 +7,7 @@ import styles from '../css/HeaderNav.module.css';
 
 function HeaderNav() {
   const { walletToken } = useContext(Wallet);
-  
+
   return (
     <ul className={styles.container}>
       <Link to="/" className={styles.item}>
@@ -25,7 +25,7 @@ function HeaderNav() {
           src={denariusIcon}
           alt="denarius icon"
         />
-        <p>{`${walletToken} denarius`}</p>
+        <p>{`${parseInt(walletToken, 10)} denarius`}</p>
       </li>
     </ul>
   );
