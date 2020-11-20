@@ -12,11 +12,6 @@
   border: none;
 }
 
-.container:hover {
-  opacity: 0.8;
-  transition: all 500ms;
-}
-
 .containerActive {
   background-color: #ffff;
   color: #323232;
