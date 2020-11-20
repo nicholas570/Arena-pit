@@ -6,7 +6,6 @@ import Fight from '../components/Fight';
 import PopUp from '../components/PopUp';
 
 import styles from '../css/WeekFight.module.css';
-<<<<<<< HEAD
 
 const averageSkill = (gladiator) => {
   const {
@@ -19,8 +18,6 @@ const averageSkill = (gladiator) => {
   } = gladiator;
   return (combat + durability + intelligence + power + speed + strength) / 6;
 };
-=======
->>>>>>> bac90d3691fd8303a69042c3e0244c09671220c3
 
 function WeekFights() {
   const Gladiators = useContext(ListGladiateur);
@@ -42,30 +39,6 @@ function WeekFights() {
     });
   }, []);
 
-<<<<<<< HEAD
-  const fetchBet = (idGladiator, idGladiator2) => {
-    setdisplay(true);
-    setgladiatorCouple({ gladiator1: idGladiator, gladiator2: idGladiator2 });
-  };
-
-  const startFight = (token) => {
-    const { gladiator1, gladiator2 } = gladiatorCouple;
-
-    const averageGladiator1 = averageSkill(gladiator1);
-    const averageGladiator2 = averageSkill(gladiator2);
-
-    const wallet = parseInt(localStorage.getItem('Token'), 10);
-
-    localStorage.setItem('Token', wallet - token);
-
-    setdisplay(false);
-    setGladiatorWinner(
-      averageGladiator1 > averageGladiator2 ? gladiator1 : gladiator2
-    );
-  };
-
-=======
->>>>>>> bac90d3691fd8303a69042c3e0244c09671220c3
   return (
     <div className={styles.container}>
       {gladiator.firstGlad.map((glad, i) => (
@@ -76,16 +49,6 @@ function WeekFights() {
           hasTriggered={hasTriggered}
         />
       ))}
-<<<<<<< HEAD
-      {display && (
-        <PopUp
-          gladiator={gladiatorCouple.gladiator1}
-          setdisplay={() => setdisplay(false)}
-          startFight={(token) => startFight(token)}
-        />
-      )}
-=======
->>>>>>> bac90d3691fd8303a69042c3e0244c09671220c3
     </div>
   );
 }
