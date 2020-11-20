@@ -3,8 +3,21 @@ import React, { useState, useContext, useEffect } from 'react';
 import { ListGladiateur } from '../context/GladiatorPovider';
 
 import Fight from '../components/Fight';
+import PopUp from '../components/PopUp';
 
 import styles from '../css/WeekFight.module.css';
+
+const averageSkill = (gladiator) => {
+  const {
+    combat,
+    durability,
+    intelligence,
+    power,
+    speed,
+    strength,
+  } = gladiator;
+  return (combat + durability + intelligence + power + speed + strength) / 6;
+};
 
 function WeekFights() {
   const Gladiators = useContext(ListGladiateur);
