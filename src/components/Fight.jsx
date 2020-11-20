@@ -65,7 +65,12 @@ function Fight({ fighter1, fighter2 }) {
   return (
     <div
       className={`${styles.container} ${
-        active ? styles.containerActive : styles.containerDisable
+        // eslint-disable-next-line no-nested-ternary
+        active
+          ? styles.containerActive
+          : gladiatorWinner === gladiatorCouple.gladiator1
+          ? styles.containerWin
+          : styles.containerLost
       }`}
     >
       <Fighter

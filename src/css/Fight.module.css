@@ -16,8 +16,14 @@
   margin: 1em;
 }
 
-.containerDisable {
-  background-color: #323232;
+.containerWin {
+  background-color: #339941;
+  color: white;
+  margin: 1em;
+}
+
+.containerLost {
+  background-color: #c53636;
   color: white;
   margin: 1em;
 }
