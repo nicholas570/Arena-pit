@@ -7,13 +7,26 @@ import Fight from '../components/Fight';
 import styles from '../css/WeekFight.module.css';
 import PopUp from '../components/PopUp';
 
+const averageSkill = (gladiator) => {
+  const {
+    combat,
+    durability,
+    intelligence,
+    power,
+    speed,
+    strength,
+  } = gladiator;
+  return (combat + durability + intelligence + power + speed + strength) / 6;
+};
+
 function WeekFights() {
   const Gladiators = useContext(ListGladiateur);
   const [display, setdisplay] = useState(false);
+  const [gladiatorWinner, setGladiatorWinner] = useState({});
   const [gladiator, setgladiator] = useState({
     firstGlad: [],
   });
-  const [id, setid] = useState(0);
+  const [gladiatorCouple, setgladiatorCouple] = useState({});
 
   const shuffle = (array) => [...array].sort(() => Math.random() - 0.5);
 
@@ -28,22 +41,43 @@ function WeekFights() {
     });
   }, []);
 
-  const fetchBet = (idGladiator) => {
+  const fetchBet = (idGladiator, idGladiator2) => {
     setdisplay(true);
-    setid(idGladiator);
+    setgladiatorCouple({ gladiator1: idGladiator, gladiator2: idGladiator2 });
+  };
+
+  const startFight = () => {
+    const { gladiator1, gladiator2 } = gladiatorCouple;
+
+    const averageGladiator1 = averageSkill(gladiator1);
+    const averageGladiator2 = averageSkill(gladiator2);
+
+    setdisplay(false);
+    setGladiatorWinner(
+      averageGladiator1 > averageGladiator2 ? gladiator1 : gladiator2
+    );
   };
 
   return (
     <div className={styles.container}>
       {gladiator.firstGlad.map((glad, i) => (
         <Fight
-          fetchBet={(idGladiator) => fetchBet(idGladiator)}
+          fetchBet={(idGladiator, idGladiator2) => {
+            fetchBet(idGladiator, idGladiator2);
+          }}
           key={glad.id}
           fighter1={glad}
           fighter2={gladiator.secondGlad[i]}
+          gladiatorWinner={gladiatorWinner}
         />
       ))}
-      {display && <PopUp id={id} setdisplay={() => setdisplay(false)} />}
+      {display && (
+        <PopUp
+          gladiator={gladiatorCouple.gladiator1}
+          setdisplay={() => setdisplay(false)}
+          startFight={() => startFight()}
+        />
+      )}
     </div>
   );
 }
